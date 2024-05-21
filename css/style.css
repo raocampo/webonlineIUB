@@ -16,15 +16,15 @@ html{
 }
 
 body{
-  font-family: 'Raleway', sans-serif;
-  background: #e6f2f862;
+  font-family: "Poppins", sans-serif;
+  /*background: #e6f2f862;*/
   font-size: 1.6rem;
   line-height: 2; 
 }
 
 /*Globales*/
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+h1, h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
   margin: 0 0 2rem 0;
 }
 h1{
@@ -58,7 +58,7 @@ h3{
 
 a{
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 img{
   max-width: 100%;
@@ -68,8 +68,9 @@ img{
   max-width: 120rem;
   margin: 0 auto;
 }
+
 .btn{
-  background-color: #8cbc00;
+  /*background-color: #1D327B;*/
   display: block;
   color: #fff;
   text-transform: uppercase;
@@ -81,7 +82,7 @@ img{
   width: 100%;
 }
 .btn:hover{
-  background-color: #769c02;
+  background-color: #FFE900;
   cursor: pointer;
 }
 @media(min-width: 768px){
@@ -132,7 +133,7 @@ img{
 }
 
 .menu{
-  background-color: darkgray;
+  background-color: #69797D;
   
 }
 
@@ -140,20 +141,34 @@ img{
   height: 9rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-around;
 }
 
 .sub-menu img{
   width: 6rem;
+
 }
 
 .sub-menu a{
-  width: 9rem;
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 1rem;
-  color: #fff;
+  font-size: 1.2rem;
   border-right: solid 0.1rem #fff;
+  cursor: pointer;
+}
+
+.sub-menu a:hover{
+  background-color: #ffe800;
+  color: #1D327B;
+}
+
+button{
+  background-color: #69797D;
+  border: none;
+  cursor: pointer;
 }
 
 
@@ -195,7 +210,7 @@ img{
   background-size: cover;
   background-position: center center;
   height: 60rem;
-  /*font-family: "Poppins", sans-serif;*/
+  /**/
 }
 
 .contenido-metodo{
@@ -214,11 +229,11 @@ img{
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 12rem;
-  color: gold;
+  color: #FFE900;
 }
 .metodologia p{
   font-size: 7rem;
-  color: gold;
+  color: #FFE900;
 }
 
 .carrusel img{
@@ -233,13 +248,22 @@ img{
   background-size: cover;
   background-position: center center;
   height: 80rem;
-  
 }
+.botones img{
+  display: block;
+  margin: 0 auto;
+}
+.botones h4{
+  font-size: 5rem;
+  font-weight: 800;
+}
+
 .sub-botones{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 30rem;
+  margin-bottom: 20rem;
 }
 
 .sub-botones img{
@@ -255,6 +279,7 @@ img{
   width: 40rem;
   height: 20rem;
   padding: 2rem;
+  margin-top: 5rem;
 }
 .horario{
   background-image: url(../assets/images/fondoBotonAzul.png);
@@ -264,10 +289,11 @@ img{
   width: 40rem;
   height: 20rem;
   padding: 2rem;
+  margin-top: 5rem;
 }
 
 .acceso p{
-  color: #040d8b;
+  color: #1D327B;
   line-height: 2rem;
 }
 .horario p{
@@ -291,3 +317,36 @@ img{
   margin-bottom: 2rem;
 }
 
+.imagen-superpuesta{
+  position: relative;
+}
+.imagen-superpuesta p{
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  font-size: 2.6rem;
+}
+.imagen-superpuesta h4{
+  position: absolute;
+  top: 10%;
+  left: 39.5%;
+  font-size: 6.8rem;
+  letter-spacing: 1rem;
+}
+
+footer{
+  margin-top: 65rem;
+  background-color: #004f9e;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+}
+footer img{
+  width: 20rem;
+}
+
+.texto-footer{
+  color: #ffe800;
+  font-size: 1.5rem;
+}
