@@ -110,7 +110,11 @@ img{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 12rem;
+  z-index: 1000;
   /*margin-bottom: 4.8rem;*/
 }
 @media (min-width: 768px){
@@ -293,7 +297,6 @@ button{
 
   .card-hero img{
     width: 40rem;
-    
   }
 }
 
@@ -356,19 +359,9 @@ button{
   margin-top: 5rem;
 }
 
-@media (min-width: 1024px ) {
-
-  .contenido-metodo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-
 @media (min-width: 768px) {
   .metodologia{
-    margin-top: 15rem;
+    margin-top: 5rem;
     font-size: 5rem;
     line-height: 7rem;
     color: #fff;
@@ -383,14 +376,28 @@ button{
     font-size: 7rem;
     color: #FFE900;
   }
-  .carrusel img{
-    margin-top: 20rem;
-  }
+
 }
 
+@media (min-width: 1024px ) {
 
+  .metodologia{
+    margin-top: 15rem;
+    font-size: 5rem;
+    line-height: 7rem;
+    color: #fff;
+  }
 
-
+  .contenido-metodo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .carrusel img{
+    margin-top: 15rem;
+  }
+}
 
 /*SECCION BOTONES*/
 
@@ -399,7 +406,7 @@ button{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 80rem;
+  height: 63rem;
 }
 .botones img{
   display: block;
@@ -412,10 +419,10 @@ button{
 
 .sub-botones{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 30rem;
-  margin-bottom: 20rem;
+  margin-bottom: 32rem;
 }
 
 .sub-botones img{
@@ -428,20 +435,20 @@ button{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  width: 40rem;
-  height: 20rem;
+  width: 25rem;
+  height: 25rem;
   padding: 2rem;
-  margin-top: 5rem;
+  /*margin-top: 5rem;*/
 }
 .horario{
   background-image: url(../assets/images/fondoBotonAzul.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  width: 40rem;
-  height: 20rem;
+  width: 25rem;
+  height: 25rem;
   padding: 2rem;
-  margin-top: 5rem;
+  /*margin-top: 5rem;*/
 }
 
 .acceso p{
@@ -453,20 +460,20 @@ button{
   line-height: 2rem;
 }
 .mencion p{
-  color: #040d8b;
+  color: #1D327B;
   line-height: 2rem;
-} 
+}
 .acceso img{
   width: 15rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .horario img{
   width: 9.6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .mencion img{
   width: 9rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .imagen-superpuesta{
@@ -474,20 +481,77 @@ button{
 }
 .imagen-superpuesta p{
   position: absolute;
-  top: 10%;
-  left: 40%;
-  font-size: 2.6rem;
+  top: 5%;
+  left: 20%;
+  font-size: 1.6rem;
 }
 .imagen-superpuesta h4{
   position: absolute;
   top: 10%;
-  left: 39.5%;
-  font-size: 6.8rem;
+  left: 20%;
+  font-size: 3.5rem;
   letter-spacing: 1rem;
 }
 
+
+@media (min-width: 768px){
+  .botones{
+    height: 80rem;
+  }
+  
+  .sub-botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+  }
+  
+  .imagen-superpuesta{
+    position: relative;
+  }
+
+  .imagen-superpuesta p{
+    position: absolute;
+    top: 10%;
+    left: 22%;
+    font-size: 3rem;
+  }
+  .imagen-superpuesta h4{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    font-size: 8rem;
+    letter-spacing: 1rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .sub-botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 12rem;
+  }
+  .imagen-superpuesta p{
+    position: absolute;
+    top: 7%;
+    left: 20%;
+    font-size: 5rem;
+  }
+  .imagen-superpuesta h4{
+    position: absolute;
+    top: 5%;
+    left: 17%;
+    font-size: 15rem;
+    letter-spacing: 1rem;
+  }
+}
+
 footer{
-  margin-top: 65rem;
+  margin-top: 25rem;
   background-color: #004f9e;
   display: flex;
   justify-content: space-evenly;
@@ -502,3 +566,14 @@ footer img{
   color: #ffe800;
   font-size: 1.5rem;
 }
+
+@media (min-width: 768px){
+  footer{
+    margin-top: 10rem;
+  }
+} 
+@media (min-width: 1024px){
+  footer{
+    margin-top: 40rem;
+  }
+} 
