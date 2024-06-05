@@ -330,17 +330,21 @@ button{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  min-width: 120rem;
+  width: 100%;
   height: 60rem;
 }
 
 .contenido-metodo{
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 2rem;
+  /*flex-direction: column-reverse;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: center;*/
 }
 .metodologia{
-  margin-top: 8rem;
+  width: 100%;
   font-size: 4rem;
   line-height: 7rem;
   color: #fff;
@@ -357,12 +361,29 @@ button{
   color: #FFE900;
 }
 
-.carrusel img{
-  margin-top: 5rem;
+.carrusel{
+  width: 100%;
+  padding: 2rem;
+  opacity: 0.8;
+}
+.carrusel h3{
+  color: #ffe800;
+}
+.carrusel.titulo-carrusel h3{
+  color: #1D327B;
 }
 
-@media (min-width: 768px) {
+
+@media (max-width: 768px){
+  .contenido-metodo{
+    width: 760px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
   .metodologia{
+    display: none;
     margin-top: 5rem;
     font-size: 5rem;
     line-height: 7rem;
@@ -378,10 +399,22 @@ button{
     font-size: 7rem;
     color: #FFE900;
   }
+  .carrusel img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
 
 }
 
 @media (min-width: 1024px ) {
+  
+  .contenido-metodo{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 2rem;
+  }
 
   .metodologia{
     margin-top: 15rem;
@@ -397,7 +430,7 @@ button{
     align-items: center;
   }
   .carrusel img{
-    margin-top: 15rem;
+    width: 50%;
   }
 }
 
@@ -409,6 +442,7 @@ button{
   background-size: cover;
   background-position: center center;
   height: 63rem;
+  
 }
 .botones img{
   display: block;
@@ -423,8 +457,10 @@ button{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
   height: 30rem;
   margin-bottom: 32rem;
+  cursor: pointer;
 }
 
 .sub-botones img{
@@ -440,8 +476,8 @@ button{
   width: 25rem;
   height: 25rem;
   padding: 2rem;
-  /*margin-top: 5rem;*/
 }
+
 .horario{
   background-image: url(../assets/images/fondoBotonAzul.png);
   background-repeat: no-repeat;
@@ -450,7 +486,6 @@ button{
   width: 25rem;
   height: 25rem;
   padding: 2rem;
-  /*margin-top: 5rem;*/
 }
 
 .acceso p{
@@ -476,6 +511,124 @@ button{
 .mencion img{
   width: 9rem;
   margin-bottom: 1rem;
+}
+
+.acceso,
+.horario,
+.mencion
+{
+  position: relative;
+}
+
+.acceso-hover-text{
+  width: 25rem;
+  height: 25rem;
+  background-image: url(../assets/images/fondoBotonAzul.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 2s;
+}
+.acceso-hover-text p
+{
+  width: 100%;
+  font-size: 2rem;
+  color: #ffe800;
+  margin-top: 10rem;
+}
+
+.acceso.boton-back img p{
+  opacity: 0;
+}
+.acceso.boton-back .acceso-hover-text{
+  display: block;
+  opacity: 1;
+} 
+.acceso.boton-back .acceso-img,
+.acceso.boton-back .acceso-texto
+{
+  display: none;
+}
+
+.horario-hover-text{
+  width: 25rem;
+  height: 25rem;
+  background-image: url(../assets/images/fondoBotonBlanco.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.horario-hover-text p
+{
+  width: 100%;
+  font-size: 2rem;
+  color: #004f9e;
+  margin-top: 10rem;
+}
+
+.horario.boton-horario img p{
+  opacity: 0;
+}
+.horario.boton-horario .horario-hover-text{
+  display: block;
+  opacity: 1;
+} 
+.horario.boton-back .horario-img,
+.horario.boton-back .horario-texto
+{
+  display: none;
+}
+
+.mencion-hover-text{
+  width: 25rem;
+  height: 25rem;
+  background-image: url(../assets/images/fondoBotonAzul.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.mencion-hover-text p
+{
+  width: 100%;
+  font-size: 2rem;
+  color: #ffe800;
+  margin-top: 2rem;
+  line-height: 2.5rem;
+}
+
+.mencion.boton-mencion img p{
+  opacity: 0;
+}
+.mencion.boton-mencion .mencion-hover-text{
+  display: block;
+  opacity: 1;
+} 
+.mencion.boton-mencion .mencion-img,
+.mencion.boton-mencion .mencion-texto
+{
+  display: none;
 }
 
 .imagen-superpuesta{
