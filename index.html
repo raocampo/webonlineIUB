@@ -19,8 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-
+    
     <title>Web Online Instituto Bolivariano</title>
 </head>
 <body>
@@ -34,13 +35,25 @@
 
     <div class="menu">
       
-      <nav class="sub-menu text-center contenedor">
+      <nav class="sub-menu text-center contenedor navbar">
         <!--<button onclick="window.location.href = 'index.html';" type="submit"><img src="assets/images/home.png" alt="iconoInicio"></button>-->
-        <a href="admisiones.html">ADMISIONES</a>
-        <a href="ofertaAcademica.html">OFERTA ACADEMICA</a>
-        <a href="formacionContinua.html">FORMACION CONTINUA</a>
-        <a href="matriculateOnline.html">MATRICULATE ONLINE</a>
-        <a href="metodologiaEstudio.html">METODOLOGIA DE ESTUDIO</a>
+        <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
+          <ul> 
+            <li><a href="pregrado.html">PREGRADO</a></li>
+            <li><a href="posgrado.html">POSGRADO</a></li> 
+            <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>   
+          </ul>
+        </li>
+        <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADEMICA<i class="bi bi-chevron-down"></i></a>
+          <ul> 
+            <li><a href="pregrado.html">PREGRADO</a></li>
+            <li><a href="oferta-academica.html">POSGRADO</a></li> 
+            <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>   
+          </ul>
+        </li>
+        <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
+        <a href="matriculate-Online.html">MATRICULATE ONLINE</a>
+        <a href="metodologia-Estudio.html">METODOLOGIA DE ESTUDIO</a>
         <a href="https://bolivarianovirtual.com/login/index.php">BOLIVARIANO DIGITAL EDUCA</a>
       </nav>
       
@@ -53,12 +66,24 @@
       <input type="checkbox" id="check" class="menu_checkbox">
       <ul class="menu-mobile-items">
         <!--<li><a href="index.html">Inicio</a></li>-->
-        <li><a href="admisiones.html">Admisiones</a></li>
-        <li><a href="ofertaAcademica.html">Oferta Academica</a></li>
-        <li><a href="formacionContinua.html">Formacion Continua</a></li>
-        <li><a href="matriculateOnline.html">Matriculate</a></li>
-        <li><a href="metodologiaEstudio.html">Metdodologia de Estudio</a></li>
-        <li><a href="https://bolivarianovirtual.com/login/index.php">Digital Educa</a></li>
+        <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
+          <ul> 
+            <li><a href="pregrado.html">PREGRADO</a></li>
+            <li><a href="posgrado.html">POSGRADO</a></li> 
+            <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>   
+          </ul>
+        </li>
+        <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADEMICA<i class="bi bi-chevron-down"></i></a>
+          <ul> 
+            <li><a href="pregrado.html">PREGRADO</a></li>
+            <li><a href="oferta-academica.html">POSGRADO</a></li> 
+            <li><a href="formacion-continua.html">FORMACIÓN CONTINUA</a></li>   
+          </ul>
+        </li>
+        <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
+        <a href="matriculate-online.html">MATRICULATE ONLINE</a>
+        <a href="metodologia-estudio.html">METODOLOGIA DE ESTUDIO</a>
+        <a href="https://bolivarianovirtual.com/login/index.php">BOLIVARIANO DIGITAL EDUCA</a>
       </ul>  
     </div>
 
@@ -66,15 +91,12 @@
 
   <section class="sub-hero">
 
-    <!--<div class="card-hero">
-      <img src="assets/images/logos/HORIZONTAL.svg" alt="logoobscuro">
-    </div>-->
     <div class="carrusel text-center">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/assets/images/Carrusel/inicio1.jpg" class="d-block w-100" alt="uno">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block card-hero">
               <span>Bienvenidos a Bolivariano Online.</span>
               <p>Transforma Tu futuro con Bolivariano Online! En el Instituto Superior Universitario Bolivariano, estamos comprometidos con la excelencia académica y la innovación educativa.
               </p>
@@ -119,15 +141,20 @@
     <div class="contenido-metodo">
     
       <div class="metodologia text-center">
-        <fieldset>
-          <legend>METODOLOGIA</legend>
-          <h3>100%</h3>
-          <p>EN LINEA</p>
-        </fieldset>
+        <img src="/assets/images/pregrado.jpg" alt="">
+        <h2>PREGRADO</h2>
+      </div>
+
+      <div class="metodologia text-center">
+        <img src="/assets/images/posgrado.jpg" alt="">
+        <h2>POSGRADO</h2>
+      </div>
+
+      <div class="metodologia text-center">
+        <img src="/assets/images/educacionContinua.jpg" alt="">
+        <h2>FORMACIÓN CONTINUA</h2>
       </div>
       
-      
-  
     </div>
   </section>
   
@@ -154,19 +181,96 @@
           <p class="mencion-texto">UNIVERSITARIA</p>
       </div>
 
-    </div>
-
-    <div class="imagen-superpuesta contenedor">
-
-      <img src="assets/images/graduados.JPG" alt="">
-      <p class="text-center">TITULOS RECONOCIDOS POR LA</p>
-      <h4 class="text-center">SENESCYT</h4>
+      <div id="obtiene" class="mencion">
+        <img class="mencion-image" src="assets/images/birrete.png" alt="">
+        <p class="mencion-texto">100% ONLINE</p>
+      </div>
 
     </div>
-    
   </section>
 
+  <section class="eventos">
+      <h2>EVENTOS</h2>
 
+      <div class="tarjeta contenedor">
+        <div class="tarjeta-evento">
+          <img src="/assets/images/event/e1.png" alt="">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p><a href="#">leer Mas...</a></p>
+        </div>
+
+        <div class="tarjeta-evento">
+          <img src="/assets/images/event/e1.png" alt="">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p><a href="#">leer Mas...</a></p>
+        </div>
+
+        <div class="tarjeta-evento">
+          <img src="/assets/images/event/e1.png" alt="">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p><a href="#">leer Mas...</a></p>
+        </div>
+
+      </div>
+
+
+  </section>
+    
+
+  <section class="accesodirecto">
+    <div>
+      <h3>ACCESOS DIRECTOS</h3>
+    </div>
+    
+    <div class="accesodirecto-icon contenedor text-center">
+      <div class="accesodirecto-menu">
+        <ul>
+          <li><i class="bi bi-calendar-check icon"></i><a href="#">Calendarios Académicos</a></li>
+          <li><i class="bi bi-pc-display icon"></i><a href="#">Biblioteca Virtual</a></li>
+          <li><i class="bi bi-display icon"></i><a href="">Aulas Virtuales</a></li>
+          <li><i class="bi bi-person-video3 icon"></i><a href="">Educación Online</a></li>
+          <li><i class="bi bi-journals icon"></i><a href="#">Boletin Semanal</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+  </section>
+
+  <section class="registro-online contenedor">
+    <h3 class="text-center">POSTULA ONLINE</h3>
+
+    <form id="registroForm" action="registrar.php" method="post">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+        
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+      
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="cedula">Número de Identificación</label>
+      <input type="number" id="cedula" name="cedula" required>
+      
+      <label for="telefono">Teléfono Móvil</label>
+      <input type="number" id="telefono" name="telefono" required>
+
+      <div>
+        <label for="tipoEstudio">Tipo de Estudio</label>
+        <select id="tipoEstudio" name="tipoEstudio" required>
+          <option value="ninguno">Seleccione una opción</option>  
+          <option value="Administrador">Pregrado</option>
+          <option value="Medico">Posgrado</option>
+          <option value="Residente">Formación Continua</option>
+        </select>
+    </div>
+      
+      <button class="btnenviar" onclick="submitFormAndGoBack();" type="button">Enviar</button>
+
+    </form>
+  </section>
 
   <footer>
     <div class="direccion">
