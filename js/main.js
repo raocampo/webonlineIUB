@@ -70,3 +70,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
   });
+
+  function sendToWhatsApp() {
+    
+    const nombre = document.getElementById('nombre').value;
+    const apellido = document.getElementById('apellido').value;
+    const cedula = document.getElementById('cedula').value;
+    const correo = document.getElementById('correo').value;
+    const mobil = document.getElementById('telefono').value;
+    const tipoEstudio = document.getElementById('tipoEstudio').value;
+    
+    if (tipoEstudio === "ninguno") {
+      alert("Por favor, selecciona un programa.");
+      return;
+    }
+    
+    const whatsappMessage = `Necesito más Informacion de: %0A${tipoEstudio}%0AMis datos son:%0ANombre: ${nombre}%0AApellido: ${apellido}%0ACedula: ${cedula}%0ACorreo Electrónico: ${correo}%0ATelefono: ${mobil}`;
+    
+    
+    const phoneNumber = '593995702328';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    document.getElementById('contactForm').reset();
+}
+

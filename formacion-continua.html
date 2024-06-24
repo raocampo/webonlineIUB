@@ -36,7 +36,7 @@
     <div class="menu">
       
       <nav class="sub-menu text-center contenedor navbar">
-        <button onclick="window.location.href = 'index.html';" type="submit"><img src="assets/images/home.png" alt="iconoInicio"></button>
+        <button onclick="window.location.href = 'index.html';" type="submit"><i class="bi bi-house-door-fill"></i></button>
         <li class="dropdown"><a href="pregrado.html">PREGRADO<i class="bi bi-chevron-down"></i></a>
           <ul> 
             <li><a href="pregrado.html">Administración de Sistemas de Salud</a></li>
@@ -95,7 +95,8 @@
           <ul> 
             <li><a href="/carreras/diplomados/cuidadospacientecritico.html">Cuidados de Enfermería en el Paciente Crítico</a></li>
             <li><a href="/carreras/diplomados/instrumentacion.html">Instrumentación Quirúrgica</a></li> 
-            <li><a href="/carreras/diplomados/adultomayor.html">Cuidados del Adulto Mayor</a></li>   
+            <li><a href="/carreras/diplomados/adultomayor.html">Cuidados del Adulto Mayor</a></li> 
+            <li><a href="/carreras/diplomados/adultomayor.html">Gestión de Proyectos</a></li>   
           </ul>
         </li>
       </ul>  
@@ -118,7 +119,7 @@
   
           <h3 class="text-center">MAS INFORMACIÓN</h3>
       
-          <form class="form-oferta" id="registroForm" action="registrar.php" method="post">
+          <form class="form-oferta" id="contactForm">
       
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -139,15 +140,15 @@
               <label for="tipoEstudio">Escoja el programa</label>
               <select id="tipoEstudio" name="tipoEstudio" required>
                 <option value="ninguno">Seleccione una opción</option>  
-                <option value="pregrado">Cuidados de Enfermería en el Paciente Crítico</option>
-                <option value="posgrado">Diplomado en Instrumentación Quirúrgica</option>
-                <option value="continua">Diplomado en Cuidados del Adulto Mayor</option>
-                <option value="continua">Diplomado en Gestión de Proyectos</option>
+                <option value="Cuidados de Enfermería en el Paciente Crítico">Cuidados de Enfermería en el Paciente Crítico</option>
+                <option value="Diplomado en Instrumentación Quirúrgica">Diplomado en Instrumentación Quirúrgica</option>
+                <option value="Diplomado en Cuidados del Adulto Mayor">Diplomado en Cuidados del Adulto Mayor</option>
+                <option value="Diplomado en Gestión de Proyectos">Diplomado en Gestión de Proyectos</option>
               </select>
   
             </div>
             
-            <button class="btnenviar" onclick="submitFormAndGoBack();" type="button">Enviar</button>
+            <button class="btnenviar" onclick="sendToWhatsApp();" type="button">Enviar</button>
       
           </form>
   
@@ -158,7 +159,12 @@
 
   </section>
 
-  <div class="mini-tarjetas">
+  <div class="banner-adm">
+    <!--<h3>PROCESO DE ADMISIÓN</h3>-->
+    <img src="/assets/images/banner/bannerformcont.png" alt="banner">
+  </div>  
+
+  <!--<div class="mini-tarjetas">
 
     <div class="mini-tarjeta-contenido">
       <h4>DOCENTES INTERNACIONALES</h4>
@@ -176,7 +182,7 @@
       <h4>FORMACIÓN EN PLATAFORMA ONLINE 24/7</h4>
     </div>
 
-  </div>
+  </div>-->
   
   <div class="texto-formcontinua">
     <p>Transformemos juntos el mundo: convirtamos nuestros sueños en realidad. Cada uno de nosotros tiene el poder de moldear el futuro que deseamos ver. Ya sea a través de pequeñas acciones cotidianas o grandes iniciativas, podemos hacer una diferencia significativa en nuestras vidas y en la de los demás. Lo que sueñas lo que quieres ser. </p>
@@ -246,7 +252,12 @@
     
   </section>
 
-  <div class="mini-tarjetas_abajo">
+  <div class="banner-adm">
+    <!--<h3>PROCESO DE ADMISIÓN</h3>-->
+    <img src="/assets/images/banner/bannercategoria.png" alt="banner">
+  </div>  
+
+  <!--<div class="mini-tarjetas_abajo">
 
     <div class="mini-tarjeta-contenido">
       <h4>SOMOS CATEGORIA A</h4>
@@ -260,7 +271,7 @@
       <h4>PREMIOS INTERNACIONALES EN EXCELENCIA EDUCATIVA</h4>
     </div>
 
-  </div>
+  </div>-->
 
   
 

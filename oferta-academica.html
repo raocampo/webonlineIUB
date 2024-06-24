@@ -37,30 +37,24 @@
       
       <nav class="sub-menu text-center contenedor navbar">
         <button onclick="window.location.href = 'index.html';" type="submit"><img src="assets/images/home.png" alt="iconoInicio"></button>
-        <li class="dropdown"><a href="pregrado.html">PREGRADO<i class="bi bi-chevron-down"></i></a>
-          <ul> 
-            <li><a href="pregrado.html">Administración de Sistemas de Salud</a></li>
-            <li><a href="posgrado.html">Administración tecnológica e innovación estratégica</a></li> 
-            <li><a href="formacion-continua.html">Administración de Empresas e Inteligencia de Negocios</a></li>   
-          </ul>
-        </li>
-        <li class="dropdown"><a href="oferta-academica.html">POSGRADO<i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="oferta-academica.html">PREGRADO<i class="bi bi-chevron-down"></i></a>
           <ul> 
             <li><a href="/carreras/maestrias/salud.html">Administración de Sistemas de Salud</a></li>
             <li><a href="/carreras/maestrias/tecnologia.html">Administración tecnológica e innovación estratégica</a></li> 
             <li><a href="/carreras/maestrias/admempresas.html">Administración de Empresas e Inteligencia de Negocios</a></li>
             <li><a href="/carreras/maestrias/contabilidad.html">Tecnología Superior Universitaria en Contabilidad </a></li>
-            <li><a href="formacion-continua.html">Administración de Empresas e Inteligencia de Negocios</a></li>   
+            <li><a href="formacioncontinua.html">Administración de Empresas e Inteligencia de Negocios</a></li>   
           </ul>
         </li>
-        <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
         <li class="dropdown"><a href="formacion-continua.html">FORMACIÓN CONTINUA<i class="bi bi-chevron-down"></i></a>
           <ul> 
             <li><a href="/carreras/diplomados/cuidadospacientecritico.html">Cuidados de Enfermería en el Paciente Crítico</a></li>
             <li><a href="/carreras/diplomados/instrumentacion.html">Instrumentación Quirúrgica</a></li> 
-            <li><a href="/carreras/diplomados/adultomayor.html">Cuidados del Adulto Mayor</a></li>   
+            <li><a href="/carreras/diplomados/adultomayor.html">Cuidados del Adulto Mayor</a></li>
+            <li><a href="/carreras/diplomados/adultomayor.html">Gestión de Proyectos</a></li>   
           </ul>
         </li>
+        <li><a href="matriculate-online.html">Matriculate Online</a></li>
         
       </nav>
       
@@ -116,8 +110,9 @@
         <div class="reg-informacion">
   
           <h3 class="text-center">MAS INFORMACIÓN</h3>
+          
       
-          <form class="form-oferta" id="registroForm" action="registrar.php" method="post">
+          <form class="form-oferta" id="contactForm" action="registrar.php" method="post">
       
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -138,14 +133,16 @@
               <label for="tipoEstudio">Tipo de Estudio</label>
               <select id="tipoEstudio" name="tipoEstudio" required>
                 <option value="ninguno">Seleccione una opción</option>  
-                <option value="pregrado">Pregrado</option>
-                <option value="posgrado">Posgrado</option>
+                <option value="Administración de Sistemas de Salud">Administración de Sistemas de Salud</option>
+                <option value="Administración tecnológica e innovación estratégica">Administración tecnológica e innovación estratégica</option>
+                <option value="Administración de Empresas e Inteligencia de Negocios">Administración de Empresas e Inteligencia de Negocios</option>
+                <option value="Tecnología Superior Universitaria en Contabilidad">Tecnología Superior Universitaria en Contabilidad</option>
                 <option value="continua">Formación Continua</option>
               </select>
   
             </div>
             
-            <button class="btnenviar" onclick="submitFormAndGoBack();" type="button">Enviar</button>
+            <button class="btnenviar" onclick="sendToWhatsApp();" type="button">Enviar</button>
       
           </form>
   
