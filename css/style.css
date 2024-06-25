@@ -429,6 +429,19 @@ button{
   font-weight: 900;
   opacity: 0.7;
 }
+.img-admindex{
+  background-color: #1d327b;
+  margin-top: 80rem;
+  overflow: hidden;
+}
+.img-admindex a{
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.img-admindex a:hover{
+  transform: scale(1.1);
+  filter: grayscale(100%);
+}
 
 @media (min-width: 768px){
   .metodo{
@@ -538,7 +551,7 @@ button{
   padding: 2rem;
 }
 
-.horario{
+.horario, .online{
   background-image: url(../assets/images/fondoBotonAzul.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -575,9 +588,17 @@ button{
 
 .acceso,
 .horario,
-.mencion
+.mencion,
+.online
 {
   position: relative;
+}
+.mencion-online span{
+  font-size: 6rem;
+  color: #1D327B;
+}
+.mencion-online P{
+  font-size: 6rem;
 }
 
 .acceso-hover-text{
@@ -691,6 +712,50 @@ button{
   display: none;
 }
 
+.online p{
+  font-size: 3rem;
+  color: #fff;
+}
+.online span{
+  font-size: 3rem;
+}
+
+.online-hover-text{
+  width: 25rem;
+  height: 25rem;
+  background-image: url(../assets/images/fondoBotonAzul.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 2s;
+}
+.online-hover-text p
+{
+  width: 100%;
+  font-size: 2rem;
+  color: #ffe800;
+  margin-top: 10rem;
+}
+.online.boton-mencion p{
+  opacity: 0;
+}
+.online.boton-mencion .mencion-hover-text{
+  display: block;
+  opacity: 1;
+} 
+.online.boton-mencion .mencion-img,
+.online.boton-mencion .mencion-texto
+{
+  display: none;
+}
+
+/*SECCION EVENTOS*/
 .eventos{
   padding: 1rem;
 }
@@ -729,6 +794,8 @@ button{
     column-gap: 1rem;
   }
 }
+
+/*ACCESOS DIRECTOS*/
 .accesodirecto{
   background-color: #69797d44;
   height: 68rem;
@@ -749,6 +816,9 @@ button{
   flex-direction: column; 
   justify-content: center;
   
+}
+.acceso1, .acceso2, .acceso3 a{
+  width: 15rem;
 }
 
 .accesodirecto-menu ul li i{

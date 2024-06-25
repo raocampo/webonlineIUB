@@ -39,15 +39,13 @@
         <!--<button onclick="window.location.href = 'index.html';" type="submit"><img src="assets/images/home.png" alt="iconoInicio"></button>-->
         <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
           <ul> 
-            <li><a href="pregrado.html">PREGRADO</a></li>
-            <li><a href="posgrado.html">POSGRADO</a></li> 
+            <li><a href="oferta-academica.html">PREGRADO</a></li> 
             <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>   
           </ul>
         </li>
         <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADEMICA<i class="bi bi-chevron-down"></i></a>
           <ul> 
-            <li><a href="pregrado.html">PREGRADO</a></li>
-            <li><a href="oferta-academica.html">POSGRADO</a></li> 
+            <li><a href="oferta-academica.html">PREGRADO</a></li>
             <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>   
           </ul>
         </li>
@@ -68,16 +66,14 @@
         <!--<li><a href="index.html">Inicio</a></li>-->
         <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
           <ul> 
-            <li><a href="pregrado.html">PREGRADO</a></li>
-            <li><a href="posgrado.html">POSGRADO</a></li> 
-            <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>   
+            <li><a href="oferta-academica.html">PREGRADO</a></li> 
+            <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>   
           </ul>
         </li>
         <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADEMICA<i class="bi bi-chevron-down"></i></a>
           <ul> 
-            <li><a href="pregrado.html">PREGRADO</a></li>
-            <li><a href="oferta-academica.html">POSGRADO</a></li> 
-            <li><a href="formacion-continua.html">FORMACIÓN CONTINUA</a></li>   
+            <li><a href="oferta-academica.html">PREGRADO</a></li> 
+            <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>   
           </ul>
         </li>
         <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
@@ -137,22 +133,28 @@
     
   </section>
 
-  <section class="metodo">
+  <section class="img-admindex">
     <div class="contenido-metodo">
     
       <div class="metodologia text-center">
-        <img src="/assets/images/pregrado.jpg" alt="">
-        <h2>PREGRADO</h2>
+        <a href="oferta-academica.html">
+          <img src="/assets/images/pregrado.jpg" alt="">
+          <h2>PREGRADO</h2>
+        </a>
       </div>
 
       <div class="metodologia text-center">
-        <img src="/assets/images/posgrado.jpg" alt="">
-        <h2>POSGRADO</h2>
+        <a href="oferta-academica.html">
+          <img src="/assets/images/posgrado.jpg" alt="">
+          <h2>POSGRADO</h2>
+        </a>
       </div>
 
       <div class="metodologia text-center">
-        <img src="/assets/images/educacionContinua.jpg" alt="">
-        <h2>FORMACIÓN CONTINUA</h2>
+        <a href="formacionContinua.html">
+          <img src="/assets/images/educacionContinua.jpg" alt="">
+          <h2>FORMACIÓN CONTINUA</h2>
+        </a>
       </div>
       
     </div>
@@ -181,9 +183,12 @@
           <p class="mencion-texto">UNIVERSITARIA</p>
       </div>
 
-      <div id="obtiene" class="mencion">
-        <img class="mencion-image" src="assets/images/birrete.png" alt="">
-        <p class="mencion-texto">100% ONLINE</p>
+      <div id="online" class="online">
+        <!--<img class="mencion-image" src="assets/images/birrete.png" alt="">-->
+        <div class="mencion-online">
+          <span>100%</span>
+          <p>ONLINE</p>
+        </div>
       </div>
 
     </div>
@@ -194,19 +199,19 @@
 
       <div class="tarjeta contenedor">
         <div class="tarjeta-evento">
-          <img src="/assets/images/event/e1.png" alt="">
+          <img src="/assets/images/illustration/eventos/evento1.jpg" alt="">
           <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
           <p><a href="#">leer Mas...</a></p>
         </div>
 
         <div class="tarjeta-evento">
-          <img src="/assets/images/event/e1.png" alt="">
+          <img src="/assets/images/illustration/eventos/evento2.jpg" alt="">
           <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
           <p><a href="#">leer Mas...</a></p>
         </div>
 
         <div class="tarjeta-evento">
-          <img src="/assets/images/event/e1.png" alt="">
+          <img src="/assets/images/illustration/1.png" alt="">
           <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
           <p><a href="#">leer Mas...</a></p>
         </div>
@@ -222,14 +227,12 @@
       <h3>ACCESOS DIRECTOS</h3>
     </div>
     
-    <div class="accesodirecto-icon contenedor text-center">
+    <div class="contenedor accesodirecto-icon text-center">
       <div class="accesodirecto-menu">
         <ul>
-          <li><i class="bi bi-calendar-check icon"></i><a href="#">Calendarios Académicos</a></li>
-          <li><i class="bi bi-pc-display icon"></i><a href="#">Biblioteca Virtual</a></li>
-          <li><i class="bi bi-display icon"></i><a href="">Aulas Virtuales</a></li>
-          <li><i class="bi bi-person-video3 icon"></i><a href="">Educación Online</a></li>
-          <li><i class="bi bi-journals icon"></i><a href="#">Boletin Semanal</a></li>
+          <li class="acceso1"><i class="bi bi-calendar-check icon"></i><a href="#">Calendarios Académicos</a></li>
+          <li class="acceso2"><i class="bi bi-pc-display icon"></i><a href="#">Biblioteca Virtual</a></li>
+          <li class="acceso3"><i class="bi bi-person-video3 icon"></i><a href="">Educación Online</a></li>
         </ul>
       </div>
     </div>
@@ -261,13 +264,12 @@
         <label for="tipoEstudio">Tipo de Estudio</label>
         <select id="tipoEstudio" name="tipoEstudio" required>
           <option value="ninguno">Seleccione una opción</option>  
-          <option value="Administrador">Pregrado</option>
-          <option value="Medico">Posgrado</option>
-          <option value="Residente">Formación Continua</option>
+          <option value="Pregrado">Pregrado</option>
+          <option value="Formación Continua">Formación Continua</option>
         </select>
     </div>
       
-      <button class="btnenviar" onclick="submitFormAndGoBack();" type="button">Enviar</button>
+      <button class="btnenviar" onclick="sendToWhatsApp();" type="button">Enviar</button>
 
     </form>
   </section>
