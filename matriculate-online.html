@@ -35,7 +35,7 @@
     <div class="menu">
       
       <nav class="sub-menu text-center contenedor navbar">
-        <!--<button onclick="window.location.href = 'index.html';" type="submit"><img src="assets/images/home.png" alt="iconoInicio"></button>-->
+        <a href="index.html"><img src="assets/images/home.png" alt="iconoInicio"></a>
         <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
           <ul> 
             <li><a href="oferta-academica.html">PREGRADO</a></li> 
@@ -85,14 +85,19 @@
   </header>
 
 
-  <section class="contenedor contenido sub-hero">
-    <h1>MATRICULATE ONLINE</h1>
-  </section>
-  
+  <main class="ingreso">
+    
+    <form class="form-ingreso" action="php/login.php" method="post">
+      <label for="nombre_usuario">USUARIO</label>
+      <input type="text" id="nombre_usuario" name="nombre_usuario" required>
 
-  
+      <label for="contrasena">CONTRASEÑA</label>
+      <input type="password" id="contrasena" name="contrasena" required>
 
+      <button type="submit">INGRESAR</button>
+    </form>
 
+  </main>
 
   <footer>
 
