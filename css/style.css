@@ -1534,13 +1534,171 @@ input{
 
 /*PAGINA TECNOLOGIA SALUD*/
 
+.tecnologia-salud{
+  background-image: url(/assets/images/img-carreras/dos.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 118rem;
+  margin-top: 12rem;
+  position: relative;
+}
+
+.tecnologia-salud::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(29, 50, 123, 0.7);
+
+}
+@media(min-width: 768px){
+  .tecnologia-salud{
+    margin-top: 23.5rem;
+    height: 125rem;
+  }
+}
+@media(min-width: 1024px){
+  .tecnologia-salud{
+    margin-top: 23.5rem;
+    height: 90rem;
+  }
+}
+
 .texto-intro{
  /* display: block;
   margin: 0 auto;*/
   width: 900px;
   margin-top: 3rem;
   margin-bottom: 5rem;
+  text-align: justify;
 }
+
+.btn-tecnologia{
+  margin-left: 70rem;
+  margin-bottom: 3rem;
+}
+.btn-tecnologia button{
+  padding: 2rem;
+  margin-left: 3rem;
+}
+
+/*PAGINA EMPRESAS*/
+
+.tecnologia-empresas{
+  background-image: url(/assets/images/img-carreras/uno.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 118rem;
+  margin-top: 12rem;
+  position: relative;
+}
+
+.tecnologia-empresas::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(29, 50, 123, 0.7);
+
+}
+@media(min-width: 768px){
+  .tecnologia-empresas{
+    margin-top: 23.5rem;
+    height: 125rem;
+  }
+}
+@media(min-width: 1024px){
+  .tecnologia-empresas{
+    margin-top: 23.5rem;
+    height: 90rem;
+  }
+}
+
+/*PAGINA INNOVACION*/
+
+.tecnologia-innovacion{
+  background-image: url(/assets/images/img-carreras/tres.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 118rem;
+  margin-top: 12rem;
+  position: relative;
+}
+
+.tecnologia-innovacion::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(29, 50, 123, 0.7);
+
+}
+@media(min-width: 768px){
+  .tecnologia-innovacion{
+    margin-top: 23.5rem;
+    height: 125rem;
+  }
+}
+@media(min-width: 1024px){
+  .tecnologia-innovacion{
+    margin-top: 23.5rem;
+    height: 90rem;
+  }
+}
+
+
+/*PAGINA CALIDAD PRODUCTIVIDAD*/
+
+.tecnologia-calidad{
+  background-image: url(/assets/images/img-carreras/cuatro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 118rem;
+  margin-top: 12rem;
+  position: relative;
+}
+
+.tecnologia-calidad::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(29, 50, 123, 0.7);
+
+}
+@media(min-width: 768px){
+  .tecnologia-calidad{
+    margin-top: 23.5rem;
+    height: 125rem;
+  }
+}
+@media(min-width: 1024px){
+  .tecnologia-calidad{
+    margin-top: 23.5rem;
+    height: 90rem;
+  }
+}
+
 
 /*PAGINA DIPLOMADO ADULTO MAYOR*/
 .formacion-adulto{
