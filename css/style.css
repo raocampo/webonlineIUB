@@ -1532,6 +1532,157 @@ input{
   font-family: var(--fuenteSegundaria);
 }
 
+/*PAGINA METODOLOGIA DE ESTUDIO*/
+
+.metodologia-estudio{
+  margin-top: 23rem;
+  width: 100%;
+}
+.metodologia-estudio img{
+  width: 100%;
+}
+/*.seccion{
+  display: flex;
+  flex-direction: column;
+}*/
+.seccion{
+  height: 50rem;
+}
+.seccion h1{
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+}
+
+/*NUESTRA IDENTIDAD - ACORDEON - MISION - VISION*/
+
+.gen-acordeon {
+  display: flex;
+  flex-flow: row-reverse;
+  gap: 30rem;
+}
+
+/*.img-acordeon {
+  width: 150%;
+  padding: 2rem;
+  margin-right: 10rem;
+}*/
+
+.contenedor-acordeon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.titulo-acordeon {
+  width: 100%;
+  font-size: 1.8rem;
+  color: #00329b;
+  font-weight: 700;
+  height: 8rem;
+  overflow: hidden;
+  border-bottom: 1px solid #00329b;
+}
+
+.titulo-acordeon p {
+  margin: 1rem;
+}
+.nos-contenido {
+  margin: 0;
+  flex-basis: calc(50% - 1rem);
+}
+.contenido-acordeon {
+  height: 0rem;
+  overflow: hidden;
+  transition: 2s;
+  padding: 0.5rem;
+}
+
+.contenido-acordeon-val {
+  height: 0rem;
+  overflow: hidden;
+  transition: 2s;
+}
+
+.contenido-acordeon p {
+  font-size: 1.3rem;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.contenido-acordeon-val {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+}
+
+.contenido-acordeon-val p {
+  font-size: 1.3rem;
+}
+
+.acordeon:hover .contenido-acordeon {
+  height: 9rem;
+}
+
+.acordeon:hover .contenido-acordeon-val {
+  height: 21rem;
+}
+
+.ico-acordeon {
+  float: right;
+  margin-right: 1rem;
+  padding-top: 0.3rem;
+}
+
+.directorio {
+  width: 60%;
+  align-items: center;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+.directorio h3 {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+ 
+}
+
+
+.titulo__bold_dir {
+  color: #00329b;
+  font-weight: 800;
+  line-height: 3rem;
+}
+
+
+@media (max-width: 991px)
+{
+
+.acordeon:hover .contenido-acordeon 
+{
+  height: 19rem;
+}
+
+.acordeon:hover .contenido-acordeon-val 
+{
+  height: 23rem;
+}
+}
+
+@media (max-width: 760px)
+{
+
+.gen-acordeon
+{
+  display: block;
+}
+.img-acordeon
+{
+  width: 100%;
+  align-items: center;
+}
+}
+
+
 /*PAGINA TECNOLOGIA SALUD*/
 
 .tecnologia-salud{
