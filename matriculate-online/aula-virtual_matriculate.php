@@ -16,14 +16,14 @@
 <body>
 
   <header class="header">
-    <?php include 'obtener_datos.php'; ?>
+    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="logo-container">
       <img src="../assets/images/logos/BolOnline.png" alt="Logo Instituto Bolivariano">
     </div>
     <div class="user-info">
       <div class="user-details">
         <span class="user-welcome">Bienvenido <?php echo $usuario['usuario']; ?></span>
-        <form action="logout.php" method="post" style="display:inline;">
+        <form action="php-bd/logout.php" method="post" style="display:inline;">
           <button class="logout-btn" type="submit">Cerrar Sesión</button>
         </form>
       </div>
@@ -81,25 +81,37 @@
   </nav>
 
   <main class="content">
-    <div class="cards-container">
-      <div class="card-program">
-        <h3>Tecnología Computacional</h3>
-        <img src="../assets/images/matriculaOnline/computacional.jpg" alt="Tecnología Computacional">
-        <p>Accede a nuestro entorno virtual.</p>
-        <button class="btn-acceder">Acceder</button>
+    <div class="column">
+      <div class="card datos-personales">
+        <h2>Conoce nuestras carreras que cuentan con aulta virtual</h2>
+        <div class="data-rowX">
+          <div class="left-column">
+            <h3>Tecnología Computacional</h3>
+            <div class="image-container">
+              <img src="../assets/images/matriculaOnline/computacional.jpg" alt="Tecnología Computacional">
+            </div>
+            <p>Accede a nuestro entorno virtual.</p>
+            <button class="btn-acceder">Acceder</button>
+          </div>
+          <div class="center-column">
+            <h3>Ciencias en Redes</h3>
+            <div class="image-container">
+              <img src="../assets/images/matriculaOnline/redes.jpg" alt="Ciencias en Redes">
+            </div>
+            <p>Accede a nuestro entorno virtual</p>
+            <button class="btn-acceder">Acceder</button>
+          </div>
+          <div class="right-column">
+            <h3>Tecnología en Redes</h3>
+            <div class="image-container">
+              <img src="../assets/images/matriculaOnline/redes2.jpg" alt="Tecnología en Redes Distribuidas">
+            </div>
+            <p>Accede a nuestro entorno virtual</p>
+            <button class="btn-acceder">Acceder</button>
+          </div>
+        </div>
       </div>
-      <div class="card-program">
-        <h3>Ciencias en Redes</h3>
-        <img src="../assets/images/matriculaOnline/redes.jpg" alt="Ciencias en Redes">
-        <p>Accede a nuestro entorno virtual</p>
-        <button class="btn-acceder">Acceder</button>
-      </div>
-      <div class="card-program">
-        <h3>Tecnología en Redes Distribuidas</h3>
-        <img src="../assets/images/matriculaOnline/redes2.jpg" alt="Tecnología en Redes Distribuidas">
-        <p>Accede a nuestro entorno virtual</p>
-        <button class="btn-acceder">Acceder</button>
-      </div>
+    </div>
     </div>
   </main>
 

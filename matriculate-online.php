@@ -77,13 +77,13 @@
         <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="oferta-academica.html">PREGRADO</a></li>
-            <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>
+            <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>
           </ul>
         </li>
         <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADEMICA<i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="oferta-academica.html">PREGRADO</a></li>
-            <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>
+            <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>
           </ul>
         </li>
         <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
@@ -98,23 +98,33 @@
 
   <main class="ingreso">
 
+    <div class="column">
+      <div class="card">
+        <div class="data-rowX">
+          <div class="left-column">
+            <h2> </h2>
+          </div>
+          <div class="right-column">
+            <form class="form-ingreso" action="matriculate-online\php-bd\login.php" method="POST">
+              <div class="imagen-form">
+                <img src="assets/images/logos/BolOnline.png" alt="Descripción de la imagen">
+              </div>
 
+              <label for="usuario">USUARIO</label>
+              <input type="text" id="usuario" name="usuario" required>
 
-    <form class="form-ingreso" action="matriculate-online\login.php" method="POST">
-      <div class="imagen-form">
-        <img src="assets/images/logos/BolOnline.png" alt="Descripción de la imagen">
+              <label for="contrasena">CONTRASEÑA</label>
+              <input type="password" id="contrasena" name="contrasena" required>
+
+              <button type="submit">INGRESAR</button>
+
+              <p class="olvide-contrasena"><a href="#">Olvidé mi contraseña</a></p>
+            </form>
+          </div>
+        </div>
       </div>
 
-      <label for="usuario">USUARIO</label>
-      <input type="text" id="usuario" name="usuario" required>
-
-      <label for="contrasena">CONTRASEÑA</label>
-      <input type="password" id="contrasena" name="contrasena" required>
-
-      <button type="submit">INGRESAR</button>
-
-      <p class="olvide-contrasena"><a href="#">Olvidé mi contraseña</a></p>
-    </form>
+    </div>
 
   </main>
 

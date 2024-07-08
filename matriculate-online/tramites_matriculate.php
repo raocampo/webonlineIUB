@@ -16,14 +16,14 @@
 <body>
 
   <header class="header">
-    <?php include 'obtener_datos.php'; ?>
+    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="logo-container">
       <img src="../assets/images/logos/BolOnline.png" alt="Logo Instituto Bolivariano">
     </div>
     <div class="user-info">
       <div class="user-details">
         <span class="user-welcome">Bienvenido <?php echo $usuario['usuario']; ?></span>
-        <form action="logout.php" method="post" style="display:inline;">
+        <form action="php-bd/logout.php" method="post" style="display:inline;">
           <button class="logout-btn" type="submit">Cerrar Sesión</button>
         </form>
       </div>
@@ -80,9 +80,9 @@
     </ul>
   </nav>
 
-  <main class="main-content">
-    <div class="card-column">
-      <div class="card-finanzas" id="facturas">
+  <main class="content">
+    <div class="column">
+      <div class="card" id="facturas">
         <h2>Trámites IUB</h2>
         <div class="data-row">
           <span class="label">Tipo de trámite:</span>
@@ -93,7 +93,7 @@
             <!-- Agrega más opciones según sea necesario -->
           </select>
         </div>
-        <div class="data-row">
+        <div class="data-rowX">
           <span class="label">Período Académico:</span>
           <select class="value select-program">
             <option value="" disabled selected>Elija un período</option>
@@ -109,9 +109,9 @@
 
       </div>
 
-      <div class="card-finanzas" id="facturas">
+      <div class="card" id="facturas">
         <h2>Historial</h2>
-        <div class="data-row">
+        <div class="data-rowX">
           <span class="label">Período Académico:</span>
           <select class="value select-program">
             <option value="" disabled selected>Elija un período</option>
@@ -127,7 +127,7 @@
 
       </div>
 
-      <div class="card-finanzas" id="facturas">
+      <div class="card" id="facturas">
         <h2>Documetos</h2>
         <div class="data-row">
           <span class="label">Programa:</span>
@@ -136,9 +136,9 @@
             <option value="cca-tecnologia-computacion">CCA TECNOLOGIA COMPUTACION</option>
             <option value="otro-programa">Otro Programa</option>
             <!-- Agrega más opciones según sea necesario -->
-          </select>wa
+          </select>
         </div>
-        <div class="data-row">
+        <div class="data-rowX">
           <span class="label">Período Académico:</span>
           <select class="value select-program">
             <option value="" disabled selected>Elija un período</option>
@@ -155,8 +155,8 @@
       </div>
     </div>
 
-    <div class="card-column">
-      <div class="card-finanzas" id="pagos-pendientes">
+    <div class="column">
+      <div class="card" id="pagos-pendientes">
         <h2 class="section-title">Personalizar Aprendizaje</h2>
         <table class="saldos-table">
           <thead>

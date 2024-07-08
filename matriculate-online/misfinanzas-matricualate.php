@@ -16,14 +16,14 @@
 <body>
 
   <header class="header">
-    <?php include 'obtener_datos.php'; ?>
+    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="logo-container">
       <img src="../assets/images/logos/BolOnline.png" alt="Logo Instituto Bolivariano">
     </div>
     <div class="user-info">
       <div class="user-details">
         <span class="user-welcome">Bienvenido <?php echo $usuario['usuario']; ?></span>
-        <form action="logout.php" method="post" style="display:inline;">
+        <form action="php-bd/logout.php" method="post" style="display:inline;">
           <button class="logout-btn" type="submit">Cerrar Sesión</button>
         </form>
       </div>
@@ -80,11 +80,12 @@
     </ul>
   </nav>
 
-  <main class="main-content">
-    <div class="card-column">
-      <div class="card-finanzas" id="estado-cuenta">
+  <main class="content">
+    <?php include 'php-bd/obtener_datos.php'; ?>
+    <div class="column">
+      <div class="card" id="estado-cuenta">
         <h2>Estado de cuenta</h2>
-        <div class="data-row">
+        <div class="data-rowX">
           <span class="value-finanzas">
             Se muestra el valor a pagar, incluida la beca otorgada (si la ha solicitado). Una vez realizado el pago,
             deberá esperar aproximadamente 10 minutos para visualizar lo ya cancelado. Si el estudiante desea aplicar a
@@ -97,7 +98,7 @@
         </div>
       </div>
 
-      <div class="card-finanzas" id="facturas">
+      <div class="card" id="facturas">
         <h2>Facturas</h2>
         <div class="data-row">
           <span class="label">Programa:</span>
@@ -108,7 +109,7 @@
             <!-- Agrega más opciones según sea necesario -->
           </select>
         </div>
-        <div class="data-row">
+        <div class="data-rowX">
           <span class="label">Período Académico:</span>
           <select class="value select-program">
             <option value="" disabled selected>Elija un período</option>
@@ -125,8 +126,8 @@
       </div>
 
     </div>
-    <div class="card-column">
-      <div class="card-finanzas" id="pagos-pendientes">
+    <div class="column">
+      <div class="card" id="pagos-pendientes">
         <h2 class="section-title">Pagos Pendientes</h2>
         <table class="saldos-table">
           <thead>
@@ -139,23 +140,23 @@
           <tbody>
             <tr>
               <td>Colegiatura</td>
-              <td>USD $0</td>
+              <td><?php echo $usuario_pgsp['colegiatura']; ?></td>
               <td>USD $0</td>
             </tr>
             <tr>
               <td>Intereses</td>
-              <td>USD $0</td>
+              <td><?php echo $usuario_pgsp['intereses']; ?></td>
               <td>USD $0</td>
             </tr>
             <tr>
               <td>Accesorios</td>
-              <td>USD $0</td>
+              <td><?php echo $usuario_pgsp['otros']; ?></td>
               <td>USD $0</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="card-finanzas" id="pagos-aplicados">
+      <div class="card" id="pagos-aplicados">
         <h2 class="section-title">Pagos Aplicados</h2>
         <table class="saldos-table">
           <thead>
@@ -168,17 +169,17 @@
           <tbody>
             <tr>
               <td>Colegiatura</td>
-              <td>USD $0</td>
+              <td><?php echo $usuario_pgsa['colegiatura']; ?></td>
               <td>USD $0</td>
             </tr>
             <tr>
               <td>Intereses</td>
-              <td>USD $0</td>
+              <td><?php echo $usuario_pgsa['intereses']; ?></td>
               <td>USD $0</td>
             </tr>
             <tr>
               <td>Accesorios</td>
-              <td>USD $0</td>
+              <td><?php echo $usuario_pgsa['otros']; ?></td>
               <td>USD $0</td>
             </tr>
           </tbody>

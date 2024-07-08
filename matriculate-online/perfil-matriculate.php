@@ -16,14 +16,14 @@
 <body>
 
   <header class="header">
-    <?php include 'obtener_datos.php'; ?>
+    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="logo-container">
       <img src="../assets/images/logos/BolOnline.png" alt="Logo Instituto Bolivariano">
     </div>
     <div class="user-info">
       <div class="user-details">
         <span class="user-welcome">Bienvenido <?php echo $usuario['usuario']; ?></span>
-        <form action="logout.php" method="post" style="display:inline;">
+        <form action="php-bd/logout.php" method="post" style="display:inline;">
           <button class="logout-btn" type="submit">Cerrar Sesión</button>
         </form>
       </div>
@@ -82,17 +82,18 @@
   </nav>
 
   <main class="content">
-    <?php include 'obtener_datos.php'; ?>
+    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="column">
       <div class="card datos-personales" id="datos-personales">
         <h2>Datos Personales</h2>
-        <form action="actualizar_datos.php" method="POST">
-          <div class="data-row">
+        <form action="php-bd/actualizar_datosP.php" method="POST">
+          <div class="data-rowX">
             <div class="left-column">
-              <div class="image-container">
+              <div class="image-containerH">
                 <img src="../assets/images/matriculaOnline/avatarUser.png" alt="Foto de Perfil">
                 <span class="label update-photo">Subir Foto</span>
               </div>
+
             </div>
             <div class="center-column">
               <div class="data-row">
@@ -105,34 +106,30 @@
                   value="<?php echo $usuario['identificacion']; ?>">
               </div>
               <div class="data-row">
-                <span class="label">Número de teléfono:</span>
+                <span class="label">Nro. de teléfono:</span>
                 <input type="text" class="value" name="nmr_tel" value="<?php echo $usuario['nmr_tel']; ?>">
               </div>
               <div class="data-row">
-                <span class="label">Correo electrónico:</span>
-                <input type="email" class="value" name="correo" value="<?php echo $usuario['correo']; ?>">
-              </div>
-              <div class="data-row">
-                <span class="label">Fecha de nacimiento:</span>
+                <span class="label">Fecha nacimiento:</span>
                 <input type="text" class="value" name="fch_nac" value="<?php echo $usuario['fch_nac']; ?>">
               </div>
             </div>
             <div class="right-column">
               <div class="data-row">
                 <span class="label">Dirección:</span>
-                <input type="text" class="value" name="direccion" value="Calle Principal #123">
+                <input type="text" class="value" name="direccion" value="<?php echo $usuario['direccion']; ?>">
               </div>
               <div class="data-row">
                 <span class="label">Estado Civil:</span>
-                <input type="text" class="value" name="estado_civil" value="Casado/a">
+                <input type="text" class="value" name="est_cvl" value="<?php echo $usuario['est_cvl']; ?>">
               </div>
               <div class="data-row">
                 <span class="label">Ciudad:</span>
-                <input type="text" class="value" name="ciudad" value="Loja">
+                <input type="text" class="value" name="ciudad" value="<?php echo $usuario['ciudad']; ?>">
               </div>
               <div class="data-row">
                 <span class="label">País:</span>
-                <input type="text" class="value" name="pais" value="Ecuador">
+                <input type="text" class="value" name="pais" value="<?php echo $usuario['pais']; ?>">
               </div>
             </div>
           </div>
@@ -142,92 +139,51 @@
 
       <div class="card domicilios" id="domicilios">
         <h2>Domicilios</h2>
-        <div class="data-row">
-          <div class="left-column">
-            <!-- Datos de domicilio izquierda -->
-            <div class="data-row">
-              <span class="label">Dirección 1:</span>
-              <input type="text" class="value" value="Av. Principal #456">
+        <form action="php-bd/actualizar_domicilios.php" method="POST">
+          <div class="data-rowX">
+            <div class="left-column">
+              <!-- Datos de domicilio izquierda -->
+              <div class="data-row">
+                <span class="label">Calle Princial:</span>
+                <input type="text" class="value" name="cll_prn" value="<?php echo $usuario_dmc['cll_prn']; ?>">
+              </div>
+              <div class="data-row">
+                <span class="label">Calle Secundaria:</span>
+                <input type="text" class="value" name="cll_scn" value="<?php echo $usuario_dmc['cll_scn']; ?>">
+              </div>
+              <div class="data-row">
+                <span class="label">Ciudad:</span>
+                <input type="text" class="value" name="ciudad" value="<?php echo $usuario['ciudad']; ?>">
+              </div>
+              <div class="data-row">
+                <span class="label">País:</span>
+                <input type="text" class="value" name="pais" value="<?php echo $usuario['pais']; ?>">
+              </div>
             </div>
-            <div class="data-row">
-              <span class="label">Dirección 2:</span>
-              <input type="text" class="value" value="Calle Secundaria #789">
-            </div>
-            <div class="data-row">
-              <span class="label">Ciudad:</span>
-              <input type="text" class="value" value="Quito">
-            </div>
-            <div class="data-row">
-              <span class="label">País:</span>
-              <input type="text" class="value" value="Ecuador">
+            <div class="right-column">
+              <!-- Datos de domicilio derecha -->
+              <div class="data-row">
+                <span class="label">Provincia:</span>
+                <input type="text" class="value" name="provincia" value="<?php echo $usuario['provincia']; ?>">
+              </div>
+              <div class="data-row">
+                <span class="label">Código Postal:</span>
+                <input type="text" class="value" name="cdg_pst" value="<?php echo $usuario_dmc['cdg_pst']; ?>">
+              </div>
+              <div class="data-row">
+                <span class="label">Teléfono de contacto:</span>
+                <input type="text" class="value" name="tlf_cnt" value="<?php echo $usuario_dmc['tlf_cnt']; ?>">
+              </div>
+              <div class="data-row">
+                <span class="label">Referencia de domicilio:</span>
+                <input type="text" class="value" name="referencia" value="<?php echo $usuario_dmc['referencia']; ?>">
+              </div>
             </div>
           </div>
-          <div class="right-column">
-            <!-- Datos de domicilio derecha -->
-            <div class="data-row">
-              <span class="label">Estado:</span>
-              <input type="text" class="value" value="Pichincha">
-            </div>
-            <div class="data-row">
-              <span class="label">Código Postal:</span>
-              <input type="text" class="value" value="170523">
-            </div>
-            <div class="data-row">
-              <span class="label">Teléfono de contacto:</span>
-              <input type="text" class="value" value="0998765432">
-            </div>
-            <div class="data-row">
-              <span class="label">Referencia de domicilio:</span>
-              <input type="text" class="value" value="Cerca del parque central">
-            </div>
-          </div>
-        </div>
+          <button type="submit" class="btn-guardar">Guardar</button>
+        </form>
       </div>
 
-
-      <div class="card info-laboral">
-        <h2>Información Laboral</h2>
-        <div class="data-row">
-          <div class="left-column">
-            <!-- Datos de domicilio izquierda -->
-            <div class="data-row">
-              <span class="label">Dirección 1:</span>
-              <input type="text" class="value" value="Av. Principal #456">
-            </div>
-            <div class="data-row">
-              <span class="label">Dirección 2:</span>
-              <input type="text" class="value" value="Calle Secundaria #789">
-            </div>
-            <div class="data-row">
-              <span class="label">Ciudad:</span>
-              <input type="text" class="value" value="Quito">
-            </div>
-            <div class="data-row">
-              <span class="label">País:</span>
-              <input type="text" class="value" value="Ecuador">
-            </div>
-          </div>
-          <div class="right-column">
-            <!-- Datos de domicilio derecha -->
-            <div class="data-row">
-              <span class="label">Estado:</span>
-              <input type="text" class="value" value="Pichincha">
-            </div>
-            <div class="data-row">
-              <span class="label">Código Postal:</span>
-              <input type="text" class="value" value="170523">
-            </div>
-            <div class="data-row">
-              <span class="label">Teléfono de contacto:</span>
-              <input type="text" class="value" value="0998765432">
-            </div>
-            <div class="data-row">
-              <span class="label">Referencia de domicilio:</span>
-              <input type="text" class="value" value="Cerca del parque central">
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="card ref-personal">
         <h2>Referencia Personal</h2>

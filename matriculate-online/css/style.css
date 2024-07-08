@@ -1,567 +1,448 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #1D327B;
-    color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1D327B;
+  color: #FFF;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .logo-container img {
-    max-width: 150px; /* Ajusta el tamaño de tu logo según tus necesidades */
+  max-width: 150px; /* Ajusta el tamaño de tu logo según tus necesidades */
 }
 
 .user-info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .user-details {
-    text-align: right;
+  text-align: right;
 }
 
 .user-welcome {
-    font-weight: bold;
-    margin-right: 10px;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .logout-btn {
-    background-color: transparent; /* Fondo transparente */
-    color: #FFF;
-    border: 2px solid #FFF;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  background-color: transparent; /* Fondo transparente */
+  color: #FFF;
+  border: 2px solid #FFF;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .logout-btn:hover {
-    background-color: #FFF;
-    color: #004f9e;
+  background-color: #FFF;
+  color: #004f9e;
 }
 
 .navigation {
-    background-color: transparent;
-    padding: 10px 5px; /* Ajusta el padding superior e inferior */
-    text-align: center; /* Centra los elementos del menú */
+  background-color: transparent;
+  padding: 10px 5px; /* Ajusta el padding superior e inferior */
+  text-align: center; /* Centra los elementos del menú */
 }
 
 .menu {
-    list-style-type: none;
-    display: inline-flex; /* Usa flexbox para centrar los elementos */
-    justify-content: center; /* Centra los elementos */
-    padding: 1;
+  list-style-type: none;
+  display: inline-flex; /* Usa flexbox para centrar los elementos */
+  justify-content: center; /* Centra los elementos */
+  padding: 0;
 }
 
 .menu li {
-    margin: 0 15px; /* Ajusta el margen entre los elementos del menú */
+  margin: 0 1rem; /* Ajusta el margen entre los elementos del menú */
 }
 
 .nav-btn {
-    text-decoration: none;
-    color: #000000;
-    border: 2px solid #004f9e;
-    padding: 1rem 1.5rem;
-    border-radius: 105px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  color: #000000;
+  border: 2px solid #004f9e;
+  padding: 0.5rem 1rem; /* Ajusta el padding */
+  border-radius: 105px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
 }
+
 .nav-dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: 200px;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown-content li {
-    text-align: left;
-  }
-  
-  .dropdown-content a {
-    display: block;
-    padding: 10px 12px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f4f4f4;
-  }
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 200px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  text-align: left;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #f4f4f4;
+}
 
 .nav-btn:hover {
-    background-color: #1D327B;
-    color: #fff;
+  background-color: #1D327B;
+  color: #fff;
+}
+
+h2{
+text-align: center;
 }
 
 .content {
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
 }
 
 .column {
-    flex: 1;
-    padding: 1rem;
-    margin: 0 1rem;
+  flex: 1;
+  padding: 1rem;
+  margin: 0 1rem;
 }
 
 .card {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card h2 {
-    margin-bottom: 1rem;
-    padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+.image-containerH {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-bottom: 1rem;
+
+}
+.image-containerH img {
+  width: 10rem; /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: 10rem;
 }
 
 .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .image-container img {
-    max-width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
-    border-radius: 50%; /* Hace que la imagen sea redonda */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: 200px; /* Hace que la imagen sea redonda */
 }
 
+
 .update-photo {
-    margin-top: 0.5rem;
-    color: #004f9e;
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-    padding-bottom: 2rem;
+  margin-top: 0.5rem;
+  color: #004f9e;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .update-photo:hover {
-    color: #accd66;
-    text-decoration: underline;
+  color: #accd66;
+  text-decoration: underline;
 }
 
 .data-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    border-bottom: 2px solid #000000; /* Añadir línea separadora */
-    padding-bottom: 0.5rem; /* Añadir padding para separar el contenido de la línea */
-}
-
-.data-row:first-child {
-    border-top: 2px solid #000000; 
-    padding-top: 0.5rem; /* Añadir padding superior para separar el contenido de la línea */
-}
-
-.data-row:last-child {
-    border-bottom: none; 
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .value {
-    text-align: right;
+  text-align: right;
 }
 
-
 .section-title {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .payment-table {
-    width: 100%;
-    border-collapse: collapse; 
-    margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse; 
+  margin-top: 1rem;
 }
 
 .payment-table th, .payment-table td {
-    padding: 0.5rem;
-    border: 1px solid #ddd; 
-    text-align: center; 
+  padding: 0.5rem;
+  border: 1px solid #ddd; 
+  text-align: center; 
 }
 
 .payment-table th {
-    background-color: #f0f0f0; 
-    font-weight: bold;
+  background-color: #f0f0f0; 
+  font-weight: bold;
 }
+
 .saldos-table {
-    width: 100%;
-    border-collapse: collapse; 
-    margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse; 
+  margin-top: 1rem;
 }
 
 .saldos-table th, .saldos-table td {
-    padding: 0.5rem;
-    border: 1px solid #ddd; 
-    text-align: center; 
+  padding: 0.5rem;
+  border: 1px solid #ddd; 
+  text-align: center; 
 }
 
 .saldos-table th {
-    background-color: #f0f0f0; 
-    font-weight: bold;
+  background-color: #f0f0f0; 
+  font-weight: bold;
 }
-
 
 /* VENTANA PERFIL */
 
+.data-rowX {
+display: flex;
+justify-content: space-between;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem; /* Añadir padding para separar el contenido de la línea */
+}
+
+.btn-guardar {
+display: block; /* Asegura que el botón ocupe todo el ancho disponible */
+margin: 0 auto; /* Establece márgenes automáticos para centrar horizontalmente */
+text-align: center;
+}
+
+.card.datos-personales {
+margin-bottom: 10px; /* Espacio entre tarjetas */
+}
+
+.card.card.datos-personales .data-row {
+margin-bottom: 10px; /* Espacio entre filas de datos */
+}
+
+.card.datos-personales .left-column,
+.card.datos-personales .center-column,
+.card.datos-personales .right-column {
+width: 30%; /* Ancho inicial de las columnas */
+float: left; /* Flotar las columnas para alinearlas */
+}
+
+
+
+.card.datos-personales .right-column {
+clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento */
+}
+
+@media (max-width: 768px) {
+.card.datos-personales .left-column,
+.card.datos-personales .center-column,
+.card.datos-personales .right-column {
+  width: 100%; /* Ajustar al ancho completo en dispositivos móviles */
+  float: none; /* Anular el flotado en dispositivos móviles */
+  padding-right: 0; /* Eliminar el espacio entre columnas en dispositivos móviles */
+}
+}
+
 .card.domicilios {
-    margin-bottom: 10px; /* Espacio entre tarjetas */
-  }
-  
-  .card.domicilios .data-row {
-    margin-bottom: 10px; /* Espacio entre filas de datos */
-  }
-  
+  margin-bottom: 10px; /* Espacio entre tarjetas */
+}
+
+.card.domicilios .data-row {
+  margin-bottom: 10px; /* Espacio entre filas de datos */
+}
+
+.card.domicilios .left-column,
+.card.domicilios .right-column {
+  width: 45%; /* Ancho inicial de las columnas */
+  float: left; /* Flotar las columnas para alinearlas */
+}
+
+.card.domicilios .right-column {
+  clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento */
+}
+
+@media (max-width: 768px) {
   .card.domicilios .left-column,
   .card.domicilios .right-column {
-    width: 45%; /* Ancho inicial de las columnas */
-    float: left; /* Flotar las columnas para alinearlas */
-    padding-right: 5%; /* Espacio entre columnas */
+    width: 100%; /* Ajustar al ancho completo en dispositivos móviles */
+    float: none; /* Anular el flotado en dispositivos móviles */
+    padding-right: 0; /* Eliminar el espacio entre columnas en dispositivos móviles */
   }
-  
-  .card.domicilios .right-column {
-    clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento */
-  }
-  
-  @media (max-width: 768px) {
-    .card.domicilios .left-column,
-    .card.domicilios .right-column {
-      width: 100%; /* Ajustar al ancho completo en dispositivos móviles */
-      float: none; /* Anular el flotado en dispositivos móviles */
-      padding-right: 0; /* Eliminar el espacio entre columnas en dispositivos móviles */
-    }
-  }
-  .card.info-laboral {
-    margin-bottom: 10px; /* Espacio entre tarjetas */
-  }
-  
-  .card.info-laboral .data-row {
-    margin-bottom: 10px; /* Espacio entre filas de datos */
-  }
-  
+}
+
+.card.info-laboral {
+  margin-bottom: 10px; /* Espacio entre tarjetas */
+}
+
+.card.info-laboral .data-row {
+  margin-bottom: 10px; /* Espacio entre filas de datos */
+}
+
+.card.info-laboral .left-column,
+.card.info-laboral .right-column {
+  width: 45%; /* Ancho inicial de las columnas */
+  float: left; /* Flotar las columnas para alinearlas */
+}
+
+.card.info-laboral .right-column {
+  clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento */
+}
+
+@media (max-width: 768px) {
   .card.info-laboral .left-column,
   .card.info-laboral .right-column {
-    width: 45%; /* Ancho inicial de las columnas */
-    float: left; /* Flotar las columnas para alinearlas */
-    padding-right: 5%; /* Espacio entre columnas */
+    width: 100%; /* Ajustar al ancho completo en dispositivos móviles */
+    float: none; /* Anular el flotado en dispositivos móviles */
+    padding-right: 0; /* Eliminar el espacio entre columnas en dispositivos móviles */
   }
-  
-  .card.info-laboral .right-column {
-    clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento */
-  }
-  
-  @media (max-width: 768px) {
-    .card.info-laboral .left-column,
-    .card.info-laboral .right-column {
-      width: 100%; /* Ajustar al ancho completo en dispositivos móviles */
-      float: none; /* Anular el flotado en dispositivos móviles */
-      padding-right: 0; /* Eliminar el espacio entre columnas en dispositivos móviles */
-    }
-  }
-
-
-  .card.ref-personal {
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    padding: 1rem;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-  }
-  
-  .card.ref-personal h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .card.ref-personal .image-upload-button {
-    margin-top: 1rem; /* Ajusta el margen superior según sea necesario */
-  }
-  
-  .card.ref-personal .image-upload-button button {
-    background-color: transparent;
-    color: #004f9e;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .card.ref-personal .image-upload-button button:hover {
-    color: #accd66; /* Cambia el color al pasar el cursor */
-  }
-
-
-  /* VENTANA MIS FINANZAS */
-
-  .main-content {
-    display: flex;
-    margin-top: 3rem; 
-    justify-content: space-around; /* Centra las columnas con espacio alrededor */
-    padding: 0 20px;
-    box-sizing: border-box;/* Utilizamos flexbox para colocar las columnas en línea */
-  }
-  
-  .card-column {
-    flex: 1; /* Cada columna ocupa el 50% del ancho */
-    max-width: 50%; /* Ancho máximo del 50% para cada columna */
-    padding: 0 10px; /* Espaciado interno entre las columnas */
-    box-sizing: border-box; /* Incluir el padding en el ancho máximo */
-  }
-  
-  .card-finanzas {
-    background-color: #f0f0f0; /* Color de fondo de las tarjetas */
-    padding: 1rem; /* Reducir el espaciado interno de las tarjetas */
-    margin-bottom: 1rem; /* Espacio inferior entre las tarjetas */
-    margin: 0 auto; /* Centra las tarjetas horizontalmente */
-    max-width: 500px; /* Ajusta el ancho máximo de las tarjetas */
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin-top: 2rem;
-
-  }
-  
-  .card-column {
-    flex: 1;
-    max-width: 50%; /* Ajusta el ancho máximo de cada columna */
-    padding: 0 10px; /* Ajusta el espacio interno entre las columnas */
-    box-sizing: border-box; /* Incluye el padding en el ancho máximo */
-  }
-  
-  .card.estado-cuenta {
-    max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
-    margin-bottom: 20px; /* Espacio inferior entre las tarjetas */
-    padding: 20px; /* Espaciado interno */
-    text-align: justify; /* Justificar el texto dentro de la tarjeta */
-  }
-  
-  .button-container {
-    text-align: center; /* Centra los botones dentro de su contenedor */
-    margin-top: 10px; /* Espacio superior */
-  }
-  
-  .detalle-periodo-btn, .plan-pagos-btn {
-    margin: 0 5px; /* Espacio entre los botones */
-    padding: 10px 20px; /* Padding interno de los botones */
-    background-color: #007bff; /* Color de fondo */
-    color: white; /* Color de texto */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cursor al pasar sobre los botones */
-  }
-  
-  .detalle-periodo-btn:hover, .plan-pagos-btn:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
-  }
-  
-  .section-title {
-    margin-bottom: 10px; /* Espacio inferior entre el título y la tabla */
-  }
-  
-  .saldos-table {
-    width: 100%; /* Ancho completo de la tabla */
-    border-collapse: collapse; /* Colapsar los bordes de la tabla */
-  }
-  
-  .saldos-table th, .saldos-table td {
-    padding: 8px; /* Espaciado interno de las celdas */
-    text-align: left; /* Alineación del texto en las celdas */
-    border-bottom: 1px solid #ddd; /* Borde inferior de las filas */
-  }
-  
-
-  .value-finanzas {
-    text-align: justify;
-    margin-top: 2rem;
 }
 
-
- /* VENTANA MIS FINANZAS */
- .content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-    text-align: center; /* Centrar el contenido */
-  }
-  
-  .card-title {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
-    text-align: center;
-    box-sizing: border-box;
-    margin-bottom: 20px; /* Espacio en la parte inferior de la tarjeta del título */
-  }
-  
-  .section-title {
-    margin: 0; /* Ajuste para eliminar cualquier margen predeterminado */
-  }
-  
-  .cards-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Permitir que las cards se ajusten si no caben en una fila */
-  }
-  .card-program {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
-    text-align: center;
-    box-sizing: border-box;
-    margin-bottom: 20px; /* Espacio en la parte inferior de las tarjetas */
-    flex: 1 1 30%; /* Hacer que cada card ocupe alrededor de un tercio del contenedor */
-  }
-  
-  .card-program h3 {
-    margin-bottom: 1rem;
-  }
-  
-  .card-program img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
-    height: 200px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Ajusta la imagen manteniendo su relación de aspecto */
-  }
-  
-  .card-program p {
-    margin-bottom: 1rem;
-  }
-  
-  .card-program .btn-acceder {
-    background-color: #004f9e;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .card-program .btn-acceder:hover {
-    background-color: #003366;
-  }
-
-
-  /* VENTANA TRAMITES */
-
-  .btn-editar {
-    background-color: #ffc107; /* Color amarillo */
-    color: #000; /* Color de texto */
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-eliminar {
-    background-color: #dc3545; /* Color rojo */
-    color: #fff; /* Color de texto */
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-editar:hover {
-    background-color: #ffca2c; /* Cambio de color al pasar el mouse */
-  }
-  
-  .btn-eliminar:hover {
-    background-color: #c82333; /* Cambio de color al pasar el mouse */
-  }
-
-
-
-  /* REGLAMENTOS VISION MISION INSTITUCIONALES */
-
-  .content-institucional {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0; /* Color de fondo de prueba */
+.card.ref-personal {
+  margin-bottom: 10px; /* Espacio entre tarjetas */
 }
 
-.institucional-card {
-    width: 70%;
-    max-width: 550px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+.card.ref-personal .data-row {
+  margin-bottom: 10px; /* Espacio entre filas de datos */
 }
 
-.image-overlay {
-    position: relative;
-    width: 50%;
-    overflow: hidden;
+.card.ref-personal .left-column,
+.card.ref-personal .right-column {
+  width: 45%; /* Ancho inicial de las columnas */
+  float: left; /* Flotar las columnas para alinearlas */
 }
 
-.img-institucional {
-  max-width: 80%; /* Ajusta el ancho máximo de la imagen al 100% del contenedor */
-  max-height: 20px; /* Define una altura máxima para la imagen */
-  width: auto; /* Permite que la imagen mantenga su relación de aspecto */
-  height: auto; /* Ajusta la altura automáticamente según el ancho máximo */
-  display: block; /* Asegura que la imagen se muestre como bloque */
-  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+.card.ref-personal .right-column {
+  clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento */
 }
 
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+@media (max-width: 768px) {
+  .card.ref-personal .left-column,
+  .card.ref-personal .right-column {
+    width: 100%; /* Ajustar al ancho completo en dispositivos móviles */
+    float: none; /* Anular el flotado en dispositivos móviles */
+    padding-right: 0; /* Eliminar el espacio entre columnas en dispositivos móviles */
+  }
 }
 
-.overlay-content h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.card.info-academica {
+  margin-bottom: 10px; /* Espacio entre tarjetas */
 }
 
-.overlay-content .btn-ver-mas {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
+.card.info-academica .data-row {
+  margin-bottom: 10px; /* Espacio entre filas de datos */
 }
 
-.overlay-content .btn-ver-mas:hover {
-    background-color: #0056b3;
+.card.info-academica .left-column,
+.card.info-academica .right-column {
+  width: 45%; /* Ancho inicial de las columnas */
+  float: left; /* Flotar las columnas para alinearlas */
+}
+
+.card.info-academica .right-column {
+  clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento */
+}
+
+@media (max-width: 768px) {
+  .card.info-academica .left-column,
+  .card.info-academica .right-column {
+    width: 100%; /* Ajustar al ancho completo en dispositivos móviles */
+    float: none; /* Anular el flotado en dispositivos móviles */
+    padding-right: 0; /* Eliminar el espacio entre columnas en dispositivos móviles */
+  }
+}
+
+.card.academico {
+  margin-bottom: 10px; /* Espacio entre tarjetas */
+}
+
+.card.academico .data-row {
+  margin-bottom: 10px; /* Espacio entre filas de datos */
+}
+
+.card.academico .left-column,
+.card.academico .right-column {
+  width: 45%; /* Ancho inicial de las columnas */
+  float: left; /* Flotar las columnas para alinearlas */
+}
+
+.card.academico .right-column {
+  clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento */
+}
+
+@media (max-width: 768px) {
+  .card.academico .left-column,
+  .card.academico .right-column {
+    width: 100%; /* Ajustar al ancho completo en dispositivos móviles */
+    float: none; /* Anular el flotado en dispositivos móviles */
+    padding-right: 0; /* Eliminar el espacio entre columnas en dispositivos móviles */
+  }
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.table th,
+.table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.button-container {
+  text-align: center; /* Centra los botones dentro de su contenedor */
+  margin-top: 10px; /* Espacio superior */
+}
+
+.btn-acceder {
+  background-color: #004f9e;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Asegura que el botón sea un bloque */
+    margin: 0 auto; 
 }

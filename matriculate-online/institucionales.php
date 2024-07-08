@@ -16,14 +16,14 @@
 <body>
 
     <header class="header">
-        <?php include 'obtener_datos.php'; ?>
+        <?php include 'php-bd/obtener_datos.php'; ?>
         <div class="logo-container">
             <img src="../assets/images/logos/BolOnline.png" alt="Logo Instituto Bolivariano">
         </div>
         <div class="user-info">
             <div class="user-details">
                 <span class="user-welcome">Bienvenido <?php echo $usuario['usuario']; ?></span>
-                <form action="logout.php" method="post" style="display:inline;">
+                <form action="php-bd/logout.php" method="post" style="display:inline;">
                     <button class="logout-btn" type="submit">Cerrar Sesión</button>
                 </form>
             </div>
@@ -85,17 +85,38 @@
         </ul>
     </nav>
 
-    <main class="content-institucional">
-        <div class="card institucional-card">
-            <div class="image-overlay">
-                <img src="../assets/images/matriculaOnline/vision.jpg" alt="Imagen Institucional"
-                    class="img-institucional">
-                <div class="overlay-content">
-                    <h2>CONOCE MÁS SOBRE NUESTROS REGLAMENTOS INSTITUCIONALES</h2>
-                    <button class="btn-ver-mas">Ver más</button>
+    <main class="content">
+        <div class="column">
+            <div class="card">
+                <div class="data-rowX">
+                    <div class="left-column">
+                        <div class="image-container">
+                            <img src="../assets/images/matriculaOnline/vision.jpg" alt="Imagen Institucional"
+                                class="img-institucional">
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h2>CONOCE MÁS SOBRE NUESTROS REGLAMENTOS INSTITUCIONALES</h2>
+                        <button class="btn-acceder">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="data-rowX">
+                    <div class="left-column">
+                        <div class="image-container">
+                            <img src="../assets/images/matriculaOnline/vision.jpg" alt="Imagen Institucional"
+                                class="img-institucional">
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h2>CONOCE MÁS SOBRE NUESTROS REGLAMENTOS INSTITUCIONALES</h2>
+                        <button class="btn-acceder">Ver más</button>
+                    </div>
                 </div>
             </div>
         </div>
+
     </main>
 
 

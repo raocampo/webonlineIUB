@@ -19,14 +19,14 @@
 <body>
 
   <header class="header">
-    <?php include 'obtener_datos.php'; ?>
+    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="logo-container">
       <img src="../assets/images/logos/BolOnline.png" alt="Logo Instituto Bolivariano">
     </div>
     <div class="user-info">
       <div class="user-details">
-        <span class="user-welcome">Bienvenido <?php echo $usuario['usuario']; ?></span>
-        <form action="logout.php" method="post" style="display:inline;">
+        <span class="user-welcome">Bienvenido <?php echo htmlspecialchars($usuario['usuario']); ?></span>
+        <form action="php-bd/logout.php" method="post" style="display:inline;">
           <button class="logout-btn" type="submit">Cerrar Sesión</button>
         </form>
       </div>
@@ -65,7 +65,7 @@
       <li class="nav-dropdown">
         <a href="tramites_matriculate.php" class="nav-btn">Trámites en Línea <i class="fas fa-caret-down"></i></a>
         <ul class="dropdown-content">
-          <li><a href="#">Trámites en Línea IUB</a></li>
+          <li><a href="#">Trámites en Línea SIU</a></li>
           <li><a href="#">Personalizar Aprendizaje</a></li>
           <li><a href="#">Historial</a></li>
           <li><a href="#">Documentos</a></li>
@@ -84,11 +84,11 @@
   </nav>
 
   <main class="content">
-    <?php include 'obtener_datos.php'; ?>
+    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="column">
       <div class="card">
         <h2>Datos Personales</h2>
-        <div class="image-container">
+        <div class="image-containerH">
           <img src="../assets/images/matriculaOnline/avatarUser.png" alt="Foto de Perfil">
           <span class="label update-photo">Actualizar Foto</span>
 
@@ -166,7 +166,7 @@
     <div class="column">
       <div class="card">
         <h2>Programas Inscritos</h2>
-        <div class="data-row">
+        <div class="data-rowX">
           <span class="value">Tecnología en Ciencias de Datos</span>
         </div>
       </div>
