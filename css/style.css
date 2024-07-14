@@ -2109,6 +2109,26 @@ input{
   }
 }
 
+/*PAGINA EVENTOS*/
+
+.noticia{
+  margin-top: 24rem;
+  margin-bottom: -30rem;
+  text-align: justify;
+}
+
+.titulo-imagen img{
+  display: block;
+  margin: 0 auto;
+}
+.titulo-imagen p{
+  font-size: 1rem;
+  margin-left: 15.8rem;
+}
+
+/*.footer-evento{
+  margin-bottom: -20rem;
+}*/
 
 /*SECCION BOTONES*/
 
