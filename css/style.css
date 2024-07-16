@@ -1494,6 +1494,57 @@ iframe{
   text-decoration: none;
   color: #00329b;
 }
+
+.imagen-form img {
+  width: 100%; 
+  max-width:100%; 
+  display: block; 
+  border-radius: 8px; 
+}
+
+.column {
+  flex: 1;
+  padding: 1rem;
+  margin: 0 1rem;
+}
+
+.card {
+  background-image: url('../assets/images/matriculaOnline/vision.jpg');
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.card .left-column,
+.card .right-column {
+  width: 45%; 
+  float: left; 
+}
+
+.card .left-column{
+  text-align: center;
+}
+
+.card .right-column {
+  clear: right; 
+}
+
+@media (max-width: 768px) {
+  .card .left-column,
+  .card .right-column {
+    width: 100%; 
+    float: none; 
+    padding-right: 0; 
+  }
+}
+
+.data-rowX {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; 
+}
+
 .form-ingreso{
   display: flex;
   flex-direction: column;
@@ -1503,6 +1554,11 @@ iframe{
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 3rem;
+}
+
+.titulo-inicio-sesion {
+  text-align: center; 
+  font-size: 2rem; 
 }
 
 #nombre_usuario,
@@ -1527,6 +1583,20 @@ button{
 button:hover{
   background-color: #ffe800;
   color: #004f9e;
+}
+
+.olvide-contrasena {
+  text-align: center; 
+  margin-top: 0.5rem; 
+}
+
+.olvide-contrasena a {
+  text-decoration: none; 
+  color: #1D327B; 
+}
+
+.olvide-contrasena a:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
 input{
