@@ -60,7 +60,7 @@
           </ul>
         </li>
         <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
-        <a href="matriculate-Online.php">MATRICULATE ONLINE</a>
+        <a href="http://localhost/iubonline/matriculate-online.php" target="_blank">MATRICULATE ONLINE</a>
         <a href="metodologia-Estudio.html">METODOLOGIA DE ESTUDIO</a>
         <a href="https://bolivarianovirtual.com/login/index.php">BOLIVARIANO DIGITAL EDUCA</a>
       </nav>
@@ -105,9 +105,9 @@
             <h2> </h2>
           </div>
           <div class="right-column">
-            <form class="form-ingreso" action="matriculate-online\php-bd\login.php" method="POST">
+            <form class="form-ingreso" action="matriculate-online/php-bd/login.php" method="POST">
               <div class="imagen-form">
-                <img src="assets/images/logos/BolOnline.png" alt="Descripción de la imagen">
+                <img src="assets/images/logos/BolOnline.png" alt="logoOnline">
               </div>
 
               <label for="usuario">USUARIO</label>

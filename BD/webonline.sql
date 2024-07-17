@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-07-2024 a las 00:13:19
+-- Tiempo de generación: 16-07-2024 a las 16:42:14
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -165,7 +165,7 @@ CREATE TABLE `usu_dmc` (
 --
 
 INSERT INTO `usu_dmc` (`id`, `usuario`, `cll_prn`, `cll_scn`, `cdg_pst`, `tlf_cnt`, `referencia`) VALUES
-(1, 'admin', 'aaa', 'aaaa', 'aaaa', 'aaaa', 'aaa'),
+(1, 'admin', 'Mercadillo', 'Bernardo Valdivieso', '11009', '0982727373', 'Frente a la farmacia'),
 (2, 'eric123', 'PARIS', 'JUAN ROBLES', '110099', '0928273742', 'DIAGONAL A LA TIENDA');
 
 -- --------------------------------------------------------
@@ -193,7 +193,7 @@ CREATE TABLE `usu_dts` (
 --
 
 INSERT INTO `usu_dts` (`id`, `usuario`, `nombres`, `identificacion`, `nmr_tel`, `fch_nac`, `est_cvl`, `direccion`, `pais`, `provincia`, `ciudad`) VALUES
-(1, 'admin', 'stiven', 'aaa', 'aaaa', '0000-00-00', 'C', 'aaa', 'ECUADOR', 'LOJA', 'MACARA'),
+(1, 'admin', 'Carlos Andres Palacios Robles', '1108444773', '0987462521', '1994-07-20', 'C', 'Calle Juan de Salinas y Av. Orillas del Zamora', 'ECUADOR', 'LOJA', 'MACARA'),
 (2, 'eric123', 'STIVEN PUERcA CALVA LOPEZ', '1199887733', '0984836740', '2004-07-13', 'C', 'AMAZONAS Y CENTENARIO', 'ECUADOR', 'LOJA', 'MACARÁ');
 
 --
