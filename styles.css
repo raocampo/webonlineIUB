@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  background-color: #333;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > ul > li {
+  position: relative;
+  display: inline-block;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #555;
+}
+
+.submenu {
+  width: 1200px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  display: flex; /* Display submenu as flexbox */
+  padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.submenu-section {
+  border-left: 1px solid #444;
+  padding-left: 10px;
+}
+
+.submenu-section h4 {
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  background-color: #444;
+}
+
+.submenu-section ul {
+  padding: 0;
+}
+
+.submenu-section ul li {
+  border-bottom: 1px solid #444;
+}
+
+.submenu-section ul li a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.submenu-section ul li a:hover {
+  background-color: #555;
+}
+
+.menu-item:hover .submenu {
+  display: flex; /* Show submenu on hover */
+}

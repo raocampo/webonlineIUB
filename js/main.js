@@ -96,3 +96,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contactForm').reset();
 }
 
+/*
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownMenuItems = document.querySelectorAll('.menu-item');
+  
+  dropdownMenuItems.forEach(menuItem => {
+    const submenu = menuItem.querySelector('.submenu');
+    const link = menuItem.querySelector('a');
+
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      submenu.style.display = submenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Close the submenu if clicking outside of it
+    document.addEventListener('click', function (e) {
+      if (!menuItem.contains(e.target)) {
+        submenu.style.display = 'none';
+      }
+    });
+  });
+});*/
