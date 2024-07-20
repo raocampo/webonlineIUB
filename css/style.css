@@ -1385,7 +1385,7 @@ iframe{
 
 /*PAGINA OFERTA ACADEMICA*/
 .oferta{
-  background-image: url(/assets/images/pregrado.jpg);
+  background-image: url(/assets/images/fondo/fondoCU.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1447,7 +1447,7 @@ iframe{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #1d317b71;
+  background-color: #1d317bf3;
 }
 .reg-informacion h3{
   color: #fff;
