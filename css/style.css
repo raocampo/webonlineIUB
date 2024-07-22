@@ -148,8 +148,8 @@ img{
  }
 
  /*SECCION MENU Y SUBMENU*/
-/*.menu{
-  /*background-color: #69797d9a;
+.menu{
+  /*background-color: #69797d9a;*/
   background-color: #fff;
   margin-top: 3rem;
 }
@@ -179,7 +179,7 @@ img{
 .sub-menu a:hover{
   border-bottom: #ffe800 solid 1px;
   font-size: 1.5rem;
-  /*font-weight: 800;
+  font-weight: 800;
 }
 .navbar li{
   list-style: none;
@@ -205,7 +205,7 @@ img{
   min-width: 1000px;
 }
 .dropdown-area{
-  width: 1200px;
+  width: 600px;
   left: 0;
 }
 
@@ -240,7 +240,7 @@ img{
   top: 0;
   left: 100%;
   visibility: visible;
-}*/
+}
 
 /* SECCION MENU Y SUBMENU */
 /*.menu {
@@ -322,9 +322,9 @@ img{
 
 .navbar .dropdown:hover > ul {
   display: flex;
-}*/
+}
 
-/* SECCION MENU Y SUBMENU */
+/* SECCION MENU Y SUBMENU
 .menu {
   background-color: #fff;
   margin-top: 3rem;
@@ -358,10 +358,10 @@ img{
 
 .navbar li {
   list-style: none;
-  position: relative; /* Ensures submenu positioning is relative to parent */
-}
+  position: relative; /* Ensures submenu positioning is relative to parent
+}*/
 
-/* General styling for dropdowns */
+/* General styling for dropdowns
 .navbar .dropdown > ul {
   display: none;
   position: absolute;
@@ -377,7 +377,7 @@ img{
   min-width: 1000px;
 }
 
-/* Dropdown links styling */
+/* Dropdown links styling
 .navbar .dropdown ul a {
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
@@ -393,14 +393,14 @@ img{
   font-weight: 800;
 }
 
-/* Dropdown visibility */
+/* Dropdown visibility
 .navbar .dropdown:hover > ul,
 .navbar .dropdown:focus-within > ul {
   display: block;
-}
+}*/
 
 /* Specific styles for submenu under CARRERAS TÉCNICAS */
-.submenu {
+/*.submenu {
   display: none;
   position: absolute;
   top: 100%;
@@ -408,7 +408,7 @@ img{
   background-color: #333;
   padding: 10px;
   z-index: 1000;
-  width: 100%; /* Adjust width as needed */
+  width: 100%; /* Adjust width as needed 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -447,13 +447,13 @@ img{
   background-color: #555;
 }
 
-/* Ensure submenu remains visible while hovering */
+/* Ensure submenu remains visible while hovering 
 .menu-item:hover .submenu,
 .menu-item:focus-within .submenu {
   display: grid;
 }
 
-/* Ensure submenu for FORMACION CONTINUA stays as it was */
+/* Ensure submenu for FORMACION CONTINUA stays as it was
 .submenu-continuous {
   display: none;
 }
@@ -461,7 +461,7 @@ img{
 .navbar .dropdown:hover .submenu-continuous,
 .navbar .dropdown:focus-within .submenu-continuous {
   display: block;
-}
+}*/
 
 
 

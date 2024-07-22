@@ -1,74 +1,87 @@
-body {
-  font-family: Arial, sans-serif;
-}
-
+/* SECCION MENU Y SUBMENU */
 .menu {
-  background-color: #333;
+  background-color: #fff;
+  margin-top: 3rem;
 }
 
-.menu ul {
+.sub-menu {
+  /*height: 9rem;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sub-menu img {
+  width: 6rem;
+}
+
+.sub-menu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #1D327B;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sub-menu a:hover {
+  border-bottom: #ffe800 solid 1px;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .dropdown ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f5f9fa;
+  padding: 1rem;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.navbar .dropdown:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navbar .dropdown ul .submenu-secciones {
+  padding: 1rem;
+  background: #eaeaea;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.navbar .dropdown ul .submenu-secciones ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.menu > ul > li {
-  position: relative;
-  display: inline-block;
+.navbar .dropdown ul .submenu-secciones ul li {
+  margin-bottom: 0.5rem;
 }
 
-.menu a {
-  display: block;
-  padding: 10px 20px;
-  color: #fff;
+.navbar .dropdown ul .submenu-secciones ul li a {
   text-decoration: none;
+  color: #00329b;
+  font-size: 1rem;
 }
 
-.menu a:hover {
-  background-color: #555;
-}
-
-.submenu {
-  width: 1200px;
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #333;
-  display: flex; /* Display submenu as flexbox */
-  padding: 10px; /* Optional: Add padding for better spacing */
-}
-
-.submenu-section {
-  border-left: 1px solid #444;
-  padding-left: 10px;
-}
-
-.submenu-section h4 {
-  margin: 0;
-  padding: 10px;
-  color: #fff;
-  background-color: #444;
-}
-
-.submenu-section ul {
-  padding: 0;
-}
-
-.submenu-section ul li {
-  border-bottom: 1px solid #444;
-}
-
-.submenu-section ul li a {
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.submenu-section ul li a:hover {
-  background-color: #555;
-}
-
-.menu-item:hover .submenu {
-  display: flex; /* Show submenu on hover */
+.navbar .dropdown ul .submenu-secciones ul li a:hover {
+  color: #ffe800;
 }
