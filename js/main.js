@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tipoEstudio = document.getElementById('tipoEstudio').value;
     
     if (tipoEstudio === "ninguno") {
-      alert("Por favor, selecciona un programa.");
+      alert("Por favor, selecciona una especialidad");
       return;
     }
     

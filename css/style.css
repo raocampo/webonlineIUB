@@ -1262,9 +1262,17 @@ form{
 }
 @media(min-width: 1024px){
   .registro-online{
-    height: 31rem;
+    height: 35rem;
 
   }
+}
+.btnenviarindex{
+  width: 100px;
+  background-color: #1D327B;
+  color: #ffe800;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
 }
 
 /*AREA PIE DE PAGINA*/
