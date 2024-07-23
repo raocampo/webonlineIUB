@@ -49,20 +49,21 @@
         <a href="index.html"><img src="assets/images/home.png" alt="iconoInicio"></a>
         <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="oferta-academica.html">PREGRADO</a></li>
-            <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>
+            <li><a href="oferta-academica.html">CARRERAS UNIVERSITARIAS</a></li>
+            <li><a href="formacioncontinua.html">FORMACIÓN CONTINUA</a></li>
+            <li><a href="formacioncontinua.html">POSGRADOS</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADEMICA<i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="oferta-academica.html">PREGRADO</a></li>
+        <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADÉMICA<i class="bi bi-chevron-down"></i></a>
+          <!--<ul>
+            <li><a href="oferta-academica.html">CARR</a></li>
             <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>
-          </ul>
+          </ul>-->
         </li>
         <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
-        <a href="http://localhost/iubonline/matriculate-online.php" target="_blank">MATRICULATE ONLINE</a>
-        <a href="metodologia-Estudio.html">METODOLOGIA DE ESTUDIO</a>
-        <a href="https://bolivarianovirtual.com/login/index.php">BOLIVARIANO DIGITAL EDUCA</a>
+        <a href="http://localhost/iubonline/matriculate-online.php" target="_blank">MATRICÚLATE ONLINE</a>
+        <a href="metodologia-Estudio.html">METODOLOGÍA DE ESTUDIO</a>
+        <a href="https://bolivarianovirtual.com/login/index.php">EVA BOLIVARIANO ONLINE</a>
       </nav>
 
     </div>
@@ -76,20 +77,20 @@
         <!--<li><a href="index.html">Inicio</a></li>-->
         <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="oferta-academica.html">PREGRADO</a></li>
-            <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>
+            <li><a href="oferta-academica.html">CARRERAS UNIVERSITARIAS</a></li>
+            <li><a href="formacioncontinua.html">FORMACIÓN CONTINUA</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADEMICA<i class="bi bi-chevron-down"></i></a>
-          <ul>
+        <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADÉMICA<i class="bi bi-chevron-down"></i></a>
+          <!--<ul>
             <li><a href="oferta-academica.html">PREGRADO</a></li>
             <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>
-          </ul>
+          </ul>-->
         </li>
         <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
-        <a href="matriculate-Online.php">MATRICULATE ONLINE</a>
-        <a href="metodologia-estudio.html">METODOLOGIA DE ESTUDIO</a>
-        <a href="https://bolivarianovirtual.com/login/index.php">BOLIVARIANO DIGITAL EDUCA</a>
+        <a href="matriculate-Online.php">MATRICÚLATE ONLINE</a>
+        <a href="metodologia-estudio.html">METODOLOGÍA DE ESTUDIO</a>
+        <a href="https://bolivarianovirtual.com/login/index.php">EVA BOLIVARIANO ONLINE</a>
       </ul>
     </div>
 

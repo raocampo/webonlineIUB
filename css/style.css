@@ -147,9 +147,9 @@ img{
    }
  }
 
- /*SECCION MENU Y SUBMENU*/
+ /*SECCION MENU Y SUBMENU
 .menu{
-  /*background-color: #69797d9a;*/
+  /*background-color: #69797d9a;
   background-color: #fff;
   margin-top: 3rem;
 }
@@ -204,7 +204,7 @@ img{
 .navbar .dropdown ul li {
   min-width: 1000px;
 }
-.dropdown-area{
+/*.dropdown-area{
   width: 600px;
   left: 0;
 }
@@ -240,101 +240,20 @@ img{
   top: 0;
   left: 100%;
   visibility: visible;
-}
+}*/
 
-/* SECCION MENU Y SUBMENU */
-/*.menu {
-  background-color: #fff;
-  margin-top: 3rem;
-}
-
-.sub-menu {
-  height: 9rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.sub-menu img {
-  width: 6rem;
-}
-
-.sub-menu a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: #1D327B;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.sub-menu a:hover {
-  border-bottom: #ffe800 solid 1px;
-  font-size: 1.5rem;
-}
-
-.navbar li {
-  list-style: none;
-}
-
-.navbar .dropdown ul {
-  display: none;
-  position: absolute;
-  left: 1.5rem;
-  top: calc(100% + 3rem);
-  margin: 0;
-  padding: 1rem 0;
-  z-index: 1000;
-  background: #f5f9fa;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
-  border-radius: 0 2rem;
-}
-
-.navbar .dropdown ul li {
-  min-width: 200px;
-}
-
-/*.dropdown-area {
-  width: 600px;
-  left: 0;
-}
-
-.navbar .dropdown ul a {
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-transform: none;
-  text-decoration: none;
-  border: none;
-  color: #00329b;
-}
-
-.navbar .dropdown ul a i {
-  font-size: 1.2rem;
-}
-
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #00329b;
-  font-weight: 800;
-}
-
-.navbar .dropdown:hover > ul {
-  display: flex;
-}
-
-/* SECCION MENU Y SUBMENU
 .menu {
   background-color: #fff;
   margin-top: 3rem;
 }
 
 .sub-menu {
-  height: 9rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.sub-menu li{
+  list-style: none;
 }
 
 .sub-menu img {
@@ -342,6 +261,16 @@ img{
 }
 
 .sub-menu a {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #1D327B;
+  font-weight: 800;
+  cursor: pointer;
+}
+.sub-menu1 a {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -352,33 +281,110 @@ img{
 }
 
 .sub-menu a:hover {
-  border-bottom: #ffe800 solid 1px;
+  /*border-bottom: #ffe800 solid 1px;*/
   font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar li {
-  list-style: none;
-  position: relative; /* Ensures submenu positioning is relative to parent
-}*/
+  position: relative;
+}
 
-/* General styling for dropdowns
-.navbar .dropdown > ul {
+.navbar .dropdown > a::after {
+  /*content: ' ▼';*/
+  font-size: 0.8rem;
+}
+
+.navbar .submenu1 {
   display: none;
   position: absolute;
-  left: 0;
+  left: -100%;
+  top: 100%;
+  margin: 0;
+  padding: 1rem;
+  z-index: 1000;
+  background: #f5f9fa;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  border-radius: 0 2rem;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.navbar .dropdown:hover .submenu1 {
+  width: 120rem;
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+.submenu-secciones {
+  margin-right: 2rem;
+}
+
+.submenu-secciones ul {
+  list-style: none;
+  padding: 0;
+}
+
+.submenu-secciones h6 {
+  margin: 0;
+  padding: 1rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/*.submenu-secciones ul li {
+  border-bottom: 1px solid #444;
+}*/
+
+.submenu-secciones ul li a {
+  /*padding: 1.2rem;*/
+  color: #00329b;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.submenu-secciones ul li a:hover {
+  /*border-bottom: 1px solid #ffe800;
+  background-color: #555;*/
+  color: #333;
+}
+
+/*SECCION MENU FORMACION CONTINUA*/
+
+.dropdown1 ul li a{
+  margin-top: 0;
+}
+
+.navbar .dropdown1 ul{
+  display: block;
+  position: absolute;
+  left: 1.5rem;
   top: calc(100% + 3rem);
   margin: 0;
   padding: 1rem 0;
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
   background: #f5f9fa;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
   border-radius: 0 2rem;
-  min-width: 1000px;
 }
 
-/* Dropdown links styling
-.navbar .dropdown ul a {
+.navbar .dropdown1 ul li {
+  min-width: 500px;
+}
+
+.navbar .dropdown1 ul a {
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
   font-weight: 500;
@@ -387,89 +393,29 @@ img{
   border: none;
   color: #00329b;
 }
-
-.navbar .dropdown ul a:hover {
-  color: #00329b;
+.navbar .dropdown1 ul a i {
+  font-size: 1.2rem;    
+}
+.navbar .dropdown1 ul a:hover, .navbar .dropdown1 ul .active:hover, .navbar .dropdown1 ul li:hover > a {
+  color: #333;
   font-weight: 800;
 }
-
-/* Dropdown visibility
-.navbar .dropdown:hover > ul,
-.navbar .dropdown:focus-within > ul {
-  display: block;
-}*/
-
-/* Specific styles for submenu under CARRERAS TÉCNICAS */
-/*.submenu {
-  display: none;
-  position: absolute;
+.navbar .dropdown1:hover > ul {
+  opacity: 1;
   top: 100%;
-  left: 0;
-  background-color: #333;
-  padding: 10px;
-  z-index: 1000;
-  width: 100%; /* Adjust width as needed 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  visibility: visible;
 }
-
-.submenu-secciones {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.navbar .dropdown1 .dropdown1 ul {
+  top: 0;
+  left: calc(100% - 10rem);
+  visibility: hidden;
 }
-
-.submenu-secciones h4 {
-  margin: 0;
-  padding: 10px;
-  color: #fff;
-  background-color: #444;
+.navbar .dropdown1 .dropdown1:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
 }
-
-.submenu-secciones ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.submenu-secciones ul li {
-  border-bottom: 1px solid #444;
-}
-
-.submenu-secciones ul li a {
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.submenu-secciones ul li a:hover {
-  background-color: #555;
-}
-
-/* Ensure submenu remains visible while hovering 
-.menu-item:hover .submenu,
-.menu-item:focus-within .submenu {
-  display: grid;
-}
-
-/* Ensure submenu for FORMACION CONTINUA stays as it was
-.submenu-continuous {
-  display: none;
-}
-
-.navbar .dropdown:hover .submenu-continuous,
-.navbar .dropdown:focus-within .submenu-continuous {
-  display: block;
-}*/
-
-
-
-
-
-
-
-
 
 button{
   background-color: #69797D;
@@ -2603,7 +2549,7 @@ input{
 @media(min-width: 768px){
   .formacion-instrumento{
     margin-top: 23.5rem;
-    height: 125rem;
+    height: 90rem;
   }
 }
 
