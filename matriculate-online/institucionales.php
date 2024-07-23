@@ -33,61 +33,23 @@
     <nav class="navigation">
         <ul class="menu">
             <li><a href="inicio_matriculate.php" class="nav-btn">Inicio</a></li>
-            <li class="nav-dropdown">
-                <a href="#" class="nav-btn">Perfil <i class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="perfil-matriculate.html#datos-personales">Datos personales</a></li>
-                    <li><a href="perfil-matriculate.html#domicilios">Domicilios</a></li>
-                    <li><a href="perfil-matriculate.html#info-laboral">Información laboral</a></li>
-                    <li><a href="#">Referencia personal</a></li>
-                    <li><a href="#">Información académica</a></li>
-                </ul>
-            </li>
-            <li class="nav-dropdown">
-                <a href="misfinanzas-matricualate.php" class="nav-btn">Mis Finanzas <i
-                        class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="misfinanzas-matricualate.php#estado-cuenta">Estado de cuenta</a></li>
-                    <li><a href="misfinanzas-matricualate.php#pagos-pendientes">Pagos Pendientes</a></li>
-                    <li><a href="misfinanzas-matricualate.php#pagos-aplicados">Pagos Aplicados</a></li>
-                    <li><a href="misfinanzas-matricualate.php#facturas">Facturas</a></li>
-                </ul>
-            </li>
+            <li><a href="perfil-matriculate.php" class="nav-btn">Perfil</a></li>
+            <li class=><a href="misfinanzas-matricualate.php" class="nav-btn">Mis Finanzas</a></li>
             <li class="nav-dropdown">
                 <a href="aula-virtual_matriculate.php" class="nav-btn">Aula Virtual <i
                         class="fas fa-caret-down"></i></a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Acceder</a></li>
-                    <li><a href="#">Materias Enroladas</a></li>
+                    <li><a href="https://bolivarianovirtual.com/login/index.php">Acceder</a></li>
                 </ul>
             </li>
-
-            <li class="nav-dropdown">
-                <a href="tramites_matriculate.php" class="nav-btn">Trámites en Línea <i
-                        class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Trámites en Línea SIU</a></li>
-                    <li><a href="#">Personalizar Aprendizaje</a></li>
-                    <li><a href="#">Historial</a></li>
-                    <li><a href="#">Documentos</a></li>
-                </ul>
-            </li>
-            <li class="nav-dropdown">
-                <a href="institucionales.php" class="nav-btn">Reglamentos/Misión/Visión <i
-                        class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Misión institucional</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Lista de precios</a></li>
-                    <li><a href="#">Termios y condiciones</a></li>
-                </ul>
-            </li>
+            <li><a href="tramites_matriculate.php" class="nav-btn">Trámites en Línea IUBS</a></li>
+            <li><a href="institucionales.php" class="nav-btn">Reglamentos/Misión/Visión</a></li>
         </ul>
     </nav>
 
     <main class="content">
         <div class="column">
-            <div class="card">
+            <div class="card" id="mision">
                 <div class="data-rowX">
                     <div class="left-column">
                         <div class="image-container">
@@ -96,12 +58,26 @@
                         </div>
                     </div>
                     <div class="right-column">
-                        <h2>CONOCE MÁS SOBRE NUESTROS REGLAMENTOS INSTITUCIONALES</h2>
+                        <h2>CONOCE MÁS SOBRE NUESTRA MISIÓN INSTITUCIONAL</h2>
+                        <button class="btn-acceder" href="../metodologia-estudio.html">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="politicas">
+                <div class="data-rowX">
+                    <div class="left-column">
+                        <div class="image-container">
+                            <img src="../assets/images/matriculaOnline/vision.jpg" alt="Imagen Institucional"
+                                class="img-institucional">
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h2>CONOCE MÁS SOBRE NUESTRAS POLÍTICAS INSTITUCIONALES</h2>
                         <button class="btn-acceder">Ver más</button>
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" id="terminos">
                 <div class="data-rowX">
                     <div class="left-column">
                         <div class="image-container">
@@ -110,7 +86,7 @@
                         </div>
                     </div>
                     <div class="right-column">
-                        <h2>CONOCE MÁS SOBRE NUESTROS REGLAMENTOS INSTITUCIONALES</h2>
+                        <h2>CONOCE MÁS SOBRE NUESTRAS TÉRMINOS Y CONDICIONES INSTITUCIONALES</h2>
                         <button class="btn-acceder">Ver más</button>
                     </div>
                 </div>

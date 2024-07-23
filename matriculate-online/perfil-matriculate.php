@@ -33,51 +33,16 @@
   <nav class="navigation">
     <ul class="menu">
       <li><a href="inicio_matriculate.php" class="nav-btn">Inicio</a></li>
-      <li class="nav-dropdown">
-        <a href="#" class="nav-btn">Perfil <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="perfil-matriculate.html#datos-personales">Datos personales</a></li>
-          <li><a href="perfil-matriculate.html#domicilios">Domicilios</a></li>
-          <li><a href="perfil-matriculate.html#info-laboral">Información laboral</a></li>
-          <li><a href="#">Referencia personal</a></li>
-          <li><a href="#">Información académica</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown">
-        <a href="misfinanzas-matricualate.php" class="nav-btn">Mis Finanzas <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="misfinanzas-matricualate.php#estado-cuenta">Estado de cuenta</a></li>
-          <li><a href="misfinanzas-matricualate.php#pagos-pendientes">Pagos Pendientes</a></li>
-          <li><a href="misfinanzas-matricualate.php#pagos-aplicados">Pagos Aplicados</a></li>
-          <li><a href="misfinanzas-matricualate.php#facturas">Facturas</a></li>
-        </ul>
-      </li>
+      <li><a href="perfil-matriculate.php" class="nav-btn">Perfil</a></li>
+      <li class=><a href="misfinanzas-matricualate.php" class="nav-btn">Mis Finanzas</a></li>
       <li class="nav-dropdown">
         <a href="aula-virtual_matriculate.php" class="nav-btn">Aula Virtual <i class="fas fa-caret-down"></i></a>
         <ul class="dropdown-content">
-          <li><a href="#">Acceder</a></li>
-          <li><a href="#">Materias Enroladas</a></li>
+          <li><a href="https://bolivarianovirtual.com/login/index.php">Acceder</a></li>
         </ul>
       </li>
-
-      <li class="nav-dropdown">
-        <a href="tramites_matriculate.php" class="nav-btn">Trámites en Línea <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="#">Trámites en Línea SIU</a></li>
-          <li><a href="#">Personalizar Aprendizaje</a></li>
-          <li><a href="#">Historial</a></li>
-          <li><a href="#">Documentos</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown">
-        <a href="institucionales.php" class="nav-btn">Reglamentos/Misión/Visión <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="#">Misión institucional</a></li>
-          <li><a href="#">Política de privacidad</a></li>
-          <li><a href="#">Lista de precios</a></li>
-          <li><a href="#">Termios y condiciones</a></li>
-        </ul>
-      </li>
+      <li><a href="tramites_matriculate.php" class="nav-btn">Trámites en Línea IUBS</a></li>
+      <li><a href="institucionales.php" class="nav-btn">Reglamentos/Misión/Visión</a></li>
     </ul>
   </nav>
 
@@ -185,7 +150,7 @@
       </div>
 
 
-      <div class="card ref-personal">
+      <div class="card ref-personal" id="referencia-personal">
         <h2>Referencia Personal</h2>
         <div class="image-upload-button">
           <button>Subir Imagen</button>

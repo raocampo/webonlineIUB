@@ -15,7 +15,7 @@ if (isset($_SESSION['usuario'])) {
     $usuario_nombre = $_SESSION['usuario'];
 
     // Usar una declaración preparada para evitar inyección SQL
-    $stmt = $pdo->prepare("SELECT * FROM usu_dts WHERE usuario = ?");
+    $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE usuario = ?");
     $stmt->execute([$usuario_nombre]);
     $usuario = $stmt->fetch();
 
@@ -33,6 +33,7 @@ if (isset($_SESSION['usuario'])) {
     $stmt_pgsa = $pdo->prepare("SELECT * FROM fnc_pgsa WHERE usuario = ?");
     $stmt_pgsa->execute([$usuario_nombre]);
     $usuario_pgsa = $stmt_pgsa->fetch();
+
 } else {
     echo "No has iniciado sesión";
 }

@@ -446,3 +446,23 @@ clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento *
   display: block; /* Asegura que el botón sea un bloque */
     margin: 0 auto; 
 }
+
+
+
+
+
+/*ADMINISTRADOR
+  INICIOO 
+*/
+
+
+
+/*  TRAMITES 
+*/
+
+.form-group{
+  padding: 0.5rem;
+}
+
+
+

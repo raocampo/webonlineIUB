@@ -33,57 +33,22 @@
   <nav class="navigation">
     <ul class="menu">
       <li><a href="inicio_matriculate.php" class="nav-btn">Inicio</a></li>
-      <li class="nav-dropdown">
-        <a href="perfil-matriculate.php" class="nav-btn">Perfil <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="#">Datos personales</a></li>
-          <li><a href="perfil-matriculate.php#domicilios">Domicilios</a></li>
-          <li><a href="perfil-matriculate.php#info-laboral">Información laboral</a></li>
-          <li><a href="#">Referencia personal</a></li>
-          <li><a href="#">Información académica</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown">
-        <a href="misfinanzas-matricualate.php" class="nav-btn">Mis Finanzas <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="misfinanzas-matricualate.php#estado-cuenta">Estado de cuenta</a></li>
-          <li><a href="misfinanzas-matricualate.php#pagos-pendientes">Pagos Pendientes</a></li>
-          <li><a href="misfinanzas-matricualate.php#pagos-aplicados">Pagos Aplicados</a></li>
-          <li><a href="misfinanzas-matricualate.php#facturas">Facturas</a></li>
-        </ul>
-      </li>
+      <li><a href="perfil-matriculate.php" class="nav-btn">Perfil</a></li>
+      <li class=><a href="misfinanzas-matricualate.php" class="nav-btn">Mis Finanzas</a></li>
       <li class="nav-dropdown">
         <a href="aula-virtual_matriculate.php" class="nav-btn">Aula Virtual <i class="fas fa-caret-down"></i></a>
         <ul class="dropdown-content">
-          <li><a href="#">Acceder</a></li>
-          <li><a href="#">Materias Enroladas</a></li>
+          <li><a href="https://bolivarianovirtual.com/login/index.php">Acceder</a></li>
         </ul>
       </li>
-      <li class="nav-dropdown">
-        <a href="tramites_matriculate.php" class="nav-btn">Trámites en Línea <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="">Trámites en Línea SIU</a></li>
-          <li><a href="#">Personalizar Aprendizaje</a></li>
-          <li><a href="#">Historial</a></li>
-          <li><a href="#">Documentos</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown">
-        <a href="institucionales.php" class="nav-btn">Reglamentos/Misión/Visión <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="#">Misión institucional</a></li>
-          <li><a href="#">Política de privacidad</a></li>
-          <li><a href="#">Lista de precios</a></li>
-          <li><a href="#">Termios y condiciones</a></li>
-        </ul>
-      </li>
+      <li><a href="tramites_matriculate.php" class="nav-btn">Trámites en Línea IUBS</a></li>
+      <li><a href="institucionales.php" class="nav-btn">Reglamentos/Misión/Visión</a></li>
     </ul>
   </nav>
-
   <main class="content">
     <div class="column">
-      <div class="card" id="facturas">
-        <h2>Trámites IUB</h2>
+      <div class="card" id="tramites">
+        <h2>Trámites IUBS</h2>
         <div class="data-row">
           <span class="label">Tipo de trámite:</span>
           <select class="value select-program">
@@ -109,91 +74,76 @@
 
       </div>
 
-      <div class="card" id="facturas">
-        <h2>Historial</h2>
-        <div class="data-rowX">
-          <span class="label">Período Académico:</span>
-          <select class="value select-program">
-            <option value="" disabled selected>Elija un período</option>
-            <option value="periodo1">ABR 2024 - AGO 2024</option>
-            <option value="periodo2">OCT 2023 - FEB 2024</option>
-            <!-- Agrega más opciones según sea necesario -->
-          </select>
-        </div>
-        <div class="button-container">
-          <button class="continuar-fac">Continuar</button>
-          <button class="cancelar-fac">Cancelar</button>
-        </div>
-
-      </div>
-
-      <div class="card" id="facturas">
+      <div class="card" id="documentos">
         <h2>Documetos</h2>
         <div class="data-row">
-          <span class="label">Programa:</span>
-          <select class="value select-program">
-            <option value="" disabled selected>Elija un programa</option>
-            <option value="cca-tecnologia-computacion">CCA TECNOLOGIA COMPUTACION</option>
-            <option value="otro-programa">Otro Programa</option>
-            <!-- Agrega más opciones según sea necesario -->
-          </select>
+          <span class="label">Titulo Bachiller</span>
+          <button class="continuar-fac">Subir PDF</button>
         </div>
         <div class="data-rowX">
-          <span class="label">Período Académico:</span>
-          <select class="value select-program">
-            <option value="" disabled selected>Elija un período</option>
-            <option value="periodo1">ABR 2024 - AGO 2024</option>
-            <option value="periodo2">OCT 2023 - FEB 2024</option>
-            <!-- Agrega más opciones según sea necesario -->
-          </select>
-        </div>
-        <div class="button-container">
-          <button class="continuar-fac">Continuar</button>
-          <button class="cancelar-fac">Cancelar</button>
+          <span class="label">Cédula</span>
+          <button class="continuar-fac">Subir PDF</button>
         </div>
 
       </div>
     </div>
 
     <div class="column">
-      <div class="card" id="pagos-pendientes">
-        <h2 class="section-title">Personalizar Aprendizaje</h2>
-        <table class="saldos-table">
-          <thead>
-            <tr>
-              <th>Componente</th>
-              <th>Horas</th>
-              <th>Editar/Eliminar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Investigación de datos</td>
-              <td>2</td>
-              <td>
-                <button class="btn-editar">Editar</button>
-                <button class="btn-eliminar">Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Intereses comunes</td>
-              <td> 5</td>
-              <td>
-                <button class="btn-editar">Editar</button>
-                <button class="btn-eliminar">Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Ética profesional</td>
-              <td>1</td>
-              <td>
-                <button class="btn-editar">Editar</button>
-                <button class="btn-eliminar">Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="card" id="record-academico">
+        <h2 class="section-title">Récord Académico</h2>
+        <?php
+        // Incluir y obtener el array de materias del semestre 1 desde obtener-carrera.php
+        $data = include 'php-bd/obtener-carrera.php';
+        $nombreCarrera = $data['nombreCarrera'];
+        ?>
+        <h3 class="section">Carrera: <?php echo htmlspecialchars($nombreCarrera); ?></h3>
+        <!-- Lista de materias del semestre 1 -->
+        <button id="toggleSubjects1">Ver Semestre 1</button>
+        <ul id="subjectList1" style="display: none;">
+          <?php foreach ($materiasSemestre1 as $materia): ?>
+            <li><?php echo $materia; ?></li>
+          <?php endforeach; ?>
+        </ul>
+        <!-- Lista de materias del semestre 2 -->
+        <button id="toggleSubjects2">Ver Semestre 2</button>
+        <ul id="subjectList2" style="display: none;">
+          <?php foreach ($materiasSemestre2 as $materia): ?>
+            <li><?php echo $materia; ?></li>
+          <?php endforeach; ?>
+        </ul>
+        <!-- Lista de materias del semestre 3 -->
+        <button id="toggleSubjects3">Ver Semestre 3</button>
+        <ul id="subjectList3" style="display: none;">
+          <?php foreach ($materiasSemestre3 as $materia): ?>
+            <li><?php echo $materia; ?></li>
+          <?php endforeach; ?>
+        </ul>
       </div>
+
+      <script>
+        // Agregar funcionalidad JavaScript para mostrar/ocultar listas de materias por semestre
+        document.getElementById('toggleSubjects1').addEventListener('click', function () {
+          toggleVisibility('subjectList1');
+        });
+        document.getElementById('toggleSubjects2').addEventListener('click', function () {
+          toggleVisibility('subjectList2');
+        });
+        document.getElementById('toggleSubjects3').addEventListener('click', function () {
+          toggleVisibility('subjectList3');
+        });
+
+        function toggleVisibility(elementId) {
+          var element = document.getElementById(elementId);
+          if (element.style.display === 'none') {
+            element.style.display = 'block';
+          } else {
+            element.style.display = 'none';
+          }
+        }
+      </script>
+
+
+
     </div>
   </main>
 
