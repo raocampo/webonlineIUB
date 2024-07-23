@@ -124,7 +124,7 @@ img{
 @media (min-width: 768px){
     
  .hero{
-    height: 15rem;
+    height: 25rem;
     margin-bottom: 4.8rem;
   }
 }
@@ -245,6 +245,7 @@ img{
 .menu {
   background-color: #fff;
   margin-top: 3rem;
+  
 }
 
 .sub-menu {
@@ -257,11 +258,11 @@ img{
 }
 
 .sub-menu img {
-  width: 6rem;
+  width: 5rem;
 }
 
 .sub-menu a {
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -282,7 +283,7 @@ img{
 
 .sub-menu a:hover {
   /*border-bottom: #ffe800 solid 1px;*/
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
   font-weight: 800;
 }
 
@@ -326,7 +327,7 @@ img{
 }
 
 .submenu-secciones {
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 
 .submenu-secciones ul {
@@ -2017,7 +2018,7 @@ input{
 @media(min-width: 1024px){
   .tecnologia-salud{
     margin-top: 23.5rem;
-    height: 90rem;
+    height: 77rem;
   }
 }
 
@@ -2072,7 +2073,7 @@ input{
 @media(min-width: 1024px){
   .tecnologia-empresas{
     margin-top: 23.5rem;
-    height: 90rem;
+    height: 77rem;
   }
 }
 
@@ -2109,7 +2110,7 @@ input{
 @media(min-width: 1024px){
   .tecnologia-innovacion{
     margin-top: 23.5rem;
-    height: 90rem;
+    height: 77rem;
   }
 }
 
@@ -2147,7 +2148,7 @@ input{
 @media(min-width: 1024px){
   .tecnologia-calidad{
     margin-top: 23.5rem;
-    height: 90rem;
+    height: 77rem;
   }
 }
 
@@ -2184,7 +2185,7 @@ input{
 @media(min-width: 1024px){
   .tecnologia-contabilidad{
     margin-top: 23.5rem;
-    height: 90rem;
+    height: 77rem;
   }
 }
 
@@ -2221,7 +2222,50 @@ input{
 @media(min-width: 1024px){
   .tecnologia-edubas{
     margin-top: 23.5rem;
-    height: 90rem;
+    height: 77rem;
+  }
+}
+
+/*PAGINA EDUCACIÓN CONTABILIDAD*/
+
+.tecnologia-cont{
+  background-image: url(/assets/images/fondo/fondoCON.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 118rem;
+  margin-top: 12rem;
+  position: relative;
+}
+
+.tecnologia-cont::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(29, 50, 123, 0.7);
+
+}
+@media(min-width: 768px){
+  .tecnologia-cont{
+    margin-top: 23.5rem;
+    height: 125rem;
+  }
+}
+@media(min-width: 1024px){
+  .tecnologia-cont{
+    margin-top: 23.5rem;
+    height: 77rem;
+  }
+  .conta{
+    margin-left: -20rem;
+  }
+  .form-conta{
+    margin-right: 30rem;
   }
 }
 
@@ -2258,7 +2302,7 @@ input{
 @media(min-width: 1024px){
   .tecnologia-eduinic{
     margin-top: 23.5rem;
-    height: 90rem;
+    height: 77rem;
   }
 }
 
@@ -2289,7 +2333,7 @@ input{
 @media(min-width: 768px){
   .formacion-adulto{
     margin-top: 23.5rem;
-    height: 125rem;
+    height: 77rem;
   }
 }
 
@@ -2486,7 +2530,7 @@ input{
 @media(min-width: 768px){
   .formacion-critico{
     margin-top: 23.5rem;
-    height: 125rem;
+    height: 77rem;
   }
 }
 
@@ -2518,7 +2562,7 @@ input{
 @media(min-width: 768px){
   .formacion-gestion{
     margin-top: 23.5rem;
-    height: 125rem;
+    height: 77rem;
   }
 }
 
@@ -2549,7 +2593,7 @@ input{
 @media(min-width: 768px){
   .formacion-instrumento{
     margin-top: 23.5rem;
-    height: 90rem;
+    height: 77rem;
   }
 }
 
