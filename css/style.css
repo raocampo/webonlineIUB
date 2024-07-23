@@ -275,7 +275,7 @@ img{
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #1D327B;
   font-weight: 800;
   cursor: pointer;
@@ -320,14 +320,15 @@ img{
 }
 
 .navbar .dropdown:hover .submenu1 {
-  width: 120rem;
+  width: 140rem;
   display: flex;
+  gap: 6rem;
   visibility: visible;
   opacity: 1;
 }
 
 .submenu-secciones {
-  margin-right: 4rem;
+  margin-right: 1rem;
 }
 
 .submenu-secciones ul {
@@ -350,7 +351,7 @@ img{
   /*padding: 1.2rem;*/
   color: #00329b;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .submenu-secciones ul li a:hover {
