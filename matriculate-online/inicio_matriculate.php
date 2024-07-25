@@ -14,6 +14,7 @@
 
 
 
+
 </head>
 
 <body>
@@ -131,11 +132,54 @@
     </div>
     <div class="column">
       <div class="card">
+        <?php
+        // Incluir y obtener el array de materias del semestre 1 desde obtener-carrera.php
+        $data = include 'php-bd/obtener-carrera.php';
+        $nombreCarrera = $data['nombreCarrera'];
+        $desCarrera = $data['desCarrera'];
+        include 'php-bd/obtener-asignaturas.php';
+        ?>
+
         <h2>Programas Inscritos</h2>
         <div class="data-rowX">
-          <span class="value">Tecnología en Ciencias de Datos</span>
+          <h3 class="value"><?php echo htmlspecialchars($nombreCarrera); ?></h3>
+        </div>
+        <div class="data-rowX">
+          <span><?php echo htmlspecialchars($desCarrera); ?></span>
+        </div>
+        <div class="data-rowX">
+          <table class="saldos-table">
+            <thead>
+              <tr>
+                <th colspan="3">SEMESTRE 2</th>
+              </tr>
+              <tr>
+                <th>Asignatura</th>
+                <th>Clave</th>
+                <th>Progreso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              if (!empty($asignaturas)) {
+                foreach ($asignaturas as $asignatura) {
+                  echo "<tr>
+                            <td>{$asignatura['nmb_mtr']}</td>
+                            <td>{$asignatura['clave']}</td>
+                            <td style='background:green'>E C</td>
+                          </tr>";
+                }
+              } else {
+                echo "<tr>
+                        <td colspan='3'>No hay asignaturas registradas</td>
+                      </tr>";
+              }
+              ?>
+            </tbody>
+          </table>
         </div>
       </div>
+    </div>
     </div>
   </main>
 

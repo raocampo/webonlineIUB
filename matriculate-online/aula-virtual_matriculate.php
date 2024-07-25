@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 
 <body>
@@ -52,25 +54,26 @@
         <h2>Conoce nuestras carreras que cuentan con aulta virtual</h2>
         <div class="data-rowX">
           <div class="left-column">
-            <h3>Tecnología Computacional</h3>
+            <h3>Adm. de Empresas</h3>
             <div class="image-container">
-              <img src="../assets/images/matriculaOnline/computacional.jpg" alt="Tecnología Computacional">
+              <img src="../assets/images/matriculaOnline/carreras/aempresas.png" alt="Tecnología Computacional">
             </div>
             <p>Accede a nuestro entorno virtual.</p>
             <button class="btn-acceder">Acceder</button>
           </div>
           <div class="center-column">
-            <h3>Ciencias en Redes</h3>
+            <h3>Adm. en Sistemas de Salud</h3>
             <div class="image-container">
-              <img src="../assets/images/matriculaOnline/redes.jpg" alt="Ciencias en Redes">
+              <img src="../assets/images/matriculaOnline/carreras/asalud.png" alt="Ciencias en Redes">
             </div>
             <p>Accede a nuestro entorno virtual</p>
             <button class="btn-acceder">Acceder</button>
           </div>
           <div class="right-column">
-            <h3>Tecnología en Redes</h3>
+            <h3>Contabilidad</h3>
             <div class="image-container">
-              <img src="../assets/images/matriculaOnline/redes2.jpg" alt="Tecnología en Redes Distribuidas">
+              <img src="../assets/images/matriculaOnline/carreras/contabilidad.png"
+                alt="Tecnología en Redes Distribuidas">
             </div>
             <p>Accede a nuestro entorno virtual</p>
             <button class="btn-acceder">Acceder</button>

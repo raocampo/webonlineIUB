@@ -80,7 +80,7 @@ if ($codigoCarrera) {
     }
 
     // Consulta para obtener el nombre de la carrera
-    $sqlCarrera = "SELECT nombre FROM carreras WHERE cdg_carrera = ?";
+    $sqlCarrera = "SELECT nombre, descripcion FROM carreras WHERE cdg_carrera = ?";
     $stmtCarrera = $pdo->prepare($sqlCarrera);
     $stmtCarrera->bindValue(1, $codigoCarrera, PDO::PARAM_STR);
     $stmtCarrera->execute();
@@ -88,11 +88,14 @@ if ($codigoCarrera) {
 
     if ($carreraResultado) {
         $nombreCarrera = htmlspecialchars($carreraResultado['nombre']);
+        $desCarrera = htmlspecialchars($carreraResultado['descripcion']);
     } else {
         $nombreCarrera = 'Carrera no encontrada';
+        $desCarrera = 'descripción no encontrada';
     }
 } else {
     $nombreCarrera = 'Carrera no encontrada';
+    $desCarrera = 'descripción no encontrada';
     $materiasSemestre1 = [];
     $materiasSemestre2 = [];
     $materiasSemestre3 = [];
@@ -101,6 +104,7 @@ if ($codigoCarrera) {
 // Retorna un array con el nombre de la carrera y las materias de cada semestre para usarlo en tu HTML
 return [
     'nombreCarrera' => $nombreCarrera,
+    'desCarrera' => $desCarrera,
     'materiasSemestre1' => $materiasSemestre1,
     'materiasSemestre2' => $materiasSemestre2,
     'materiasSemestre3' => $materiasSemestre3

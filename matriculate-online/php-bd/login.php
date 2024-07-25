@@ -60,6 +60,4 @@ try {
     // Error de base de datos
     echo "Error: " . $e->getMessage();
 }
-
-
 ?>

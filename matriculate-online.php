@@ -8,6 +8,14 @@
   <meta name="description" content="Bolivariano Online" />
   <meta name="keywords" content="Bolivariano Online" />
 
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
   <!--Favicon / iconos-->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/iconos/icono-32x32.png" />
 
@@ -44,54 +52,55 @@
     </div>
 
     <div class="menu">
-
+      
       <nav class="sub-menu text-center contenedor navbar">
-        <a href="index.html"><img src="assets/images/home.png" alt="iconoInicio"></a>
-        <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="oferta-academica.html">CARRERAS UNIVERSITARIAS</a></li>
-            <li><a href="formacioncontinua.html">FORMACIÓN CONTINUA</a></li>
-            <li><a href="formacioncontinua.html">POSGRADOS</a></li>
+        <a href="index.html"><img src="assets/images/home1.png" alt="iconoInicio"></a>
+        <li class="dropdown1"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
+          <ul> 
+            <li><a href="oferta-academica.html">CARRERAS UNIVERSITARIAS</a></li> 
+            <li><a href="formacion-continua.html">FORMACIÓN CONTINUA</a></li>
+            <li><a href="formacion-continua.html">POSGRADOS</a></li>    
           </ul>
         </li>
-        <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADÉMICA<i class="bi bi-chevron-down"></i></a>
-          <!--<ul>
-            <li><a href="oferta-academica.html">CARR</a></li>
-            <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>
+        <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADÉMICA<!--<i class="bi bi-chevron-down"></i>--></a>
+          <!--<ul> 
+            <li><a href="oferta-academica.html">PREGRADO</a></li>
+            <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>   
           </ul>-->
         </li>
         <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
         <a href="http://localhost/iubonline/matriculate-online.php" target="_blank">MATRICÚLATE ONLINE</a>
-        <a href="metodologia-Estudio.html">METODOLOGÍA DE ESTUDIO</a>
+        <a href="metodologia-estudio.html">METODOLOGÍA DE ESTUDIO</a>
         <a href="https://bolivarianovirtual.com/login/index.php">EVA BOLIVARIANO ONLINE</a>
       </nav>
-
+      
     </div>
 
     <div class="menu-mobile">
       <label for="check" class="menu-icon">
         <i class="fa-solid fa-bars"></i>
-      </label>
+      </label>  
       <input type="checkbox" id="check" class="menu_checkbox">
       <ul class="menu-mobile-items">
         <!--<li><a href="index.html">Inicio</a></li>-->
         <li class="dropdown"><a href="admisiones-iub.html">ADMISIONES<i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="oferta-academica.html">CARRERAS UNIVERSITARIAS</a></li>
-            <li><a href="formacioncontinua.html">FORMACIÓN CONTINUA</a></li>
+          <ul> 
+            <li><a href="oferta-academica.html">CARRERAS UNIVERSITARIAS</a></li> 
+            <li><a href="formacion-continua.html">FORMACIÓN CONTINUA</a></li>
+            <li><a href="formacion-continua.html">POSGRADOS</a></li>   
           </ul>
         </li>
         <li class="dropdown"><a href="oferta-academica.html">OFERTA ACADÉMICA<i class="bi bi-chevron-down"></i></a>
-          <!--<ul>
-            <li><a href="oferta-academica.html">PREGRADO</a></li>
-            <li><a href="formacioncontinua.html">FORMACION CONTINUA</a></li>
+          <!--<ul> 
+            <li><a href="oferta-academica.html">PREGRADO</a></li> 
+            <li><a href="formacion-continua.html">FORMACION CONTINUA</a></li>   
           </ul>-->
         </li>
         <!--<li class="dropdwon"><a href="formacionContinua.html">FORMACION CONTINUA</a>-->
-        <a href="matriculate-Online.php">MATRICÚLATE ONLINE</a>
+        <a href="matriculate-online.php">MATRICÚLATE ONLINE</a>
         <a href="metodologia-estudio.html">METODOLOGÍA DE ESTUDIO</a>
         <a href="https://bolivarianovirtual.com/login/index.php">EVA BOLIVARIANO ONLINE</a>
-      </ul>
+      </ul>  
     </div>
 
   </header>
@@ -100,32 +109,216 @@
   <main class="ingreso">
 
     <div class="column">
-      <div class="card">
-        <div class="data-rowX">
-          <div class="left-column">
-            <h2> </h2>
-          </div>
-          <div class="right-column">
-            <form class="form-ingreso" action="matriculate-online/php-bd/login.php" method="POST">
-              <div class="imagen-form">
-                <img src="assets/images/logos/BolOnline.png" alt="logoOnline">
-              </div>
+      <div class="card1">
+        <div style="margin-top: 25rem;">
+          <h2 style="color: rgb(255, 255, 255);">¿Ya eres estudiante?</h2>
+          <span style="color: white;"> Ingresa aquí</span>
+        <div class="button-container">
+          <button type="button" class="guardar-btn" data-toggle="modal" data-target="#loginModal">Ingresar</button>
+        </div>
+        </div>
+        
+      </div>
 
-              <label for="usuario">USUARIO</label>
-              <input type="text" id="usuario" name="usuario" required>
+      <!-- Modal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
 
-              <label for="contrasena">CONTRASEÑA</label>
-              <input type="password" id="contrasena" name="contrasena" required>
-
-              <button type="submit">INGRESAR</button>
-
-              <p class="olvide-contrasena"><a href="#">Olvidé mi contraseña</a></p>
-            </form>
+            <div class="modal-body">
+              <form id="loginForm" method="post" action="matriculate-online/php-bd/login.php">
+                <div class="form-group">
+                  <label for="usuario">Usuario:</label>
+                  <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingrese su usuario"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="contrasena">Contraseña:</label>
+                  <input type="password" class="form-control" id="contrasena" name="contrasena"
+                    placeholder="Ingrese su contraseña" required>
+                </div>
+                <div class="button-container">
+                  <button type="submit" class="btn btn-primary">Ingresar</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
 
+
+      <div class="cardS">
+        <h2>Matriculate Online</h2>
+        <form id="formulario" method="post" action="guardar.php" style="text-align: left;"
+          enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" placeholder="Ingrese los nombres" required>
+          </div>
+          <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese los apellidos" required>
+          </div>
+          <div class="form-group">
+            <label for="identificacion">Identificación:</label>
+            <input type="text" id="identificacion" name="identificacion" placeholder="Ingrese la identificación"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="nmr_tel">Teléfono:</label>
+            <input type="text" id="nmr_tel" name="nmr_tel" placeholder="Ingrese el teléfono" required>
+          </div>
+          <div class="form-group">
+            <label for="fch_nac">Fecha de Nacimiento:</label>
+            <input type="date" id="fch_nac" name="fch_nac" required>
+          </div>
+          <div class="form-group">
+            <label for="est_cvl">Estado Civil:</label>
+            <input type="text" id="est_cvl" name="est_cvl" placeholder="Ingrese el estado civil" required>
+          </div>
+          <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Ingrese la dirección" required>
+          </div>
+          <div class="form-group">
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" placeholder="Ingrese el país" required>
+          </div>
+          <div class="form-group">
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" placeholder="Ingrese la provincia" required>
+          </div>
+          <div class="form-group">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese la ciudad" required>
+          </div>
+          <div class="form-group">
+            <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera" required>
+              <option value="">Seleccione una carrera</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Método de Pago:</label>
+            <div>
+              <input type="radio" id="transferencia" name="metodo_pago" value="transferencia" required>
+              <label for="transferencia">Transferencia</label>
+              <input type="radio" id="tarjeta_credito" name="metodo_pago" value="tarjeta_credito" required>
+              <label for="tarjeta_credito">Tjt. de Crédito</label>
+            </div>
+          </div>
+          <div class="form-group hidden" id="comprobante-section">
+            <label for="comprobante">Subir Comprobante:</label>
+            <input type="file" id="comprobante" name="comprobante" accept="application/pdf">
+          </div>
+          <div class="form-group hidden" id="tarjeta-section">
+            <label for="tarjeta_info">Tarjeta de crédito:</label>
+            <button type="button" class="cargar-btn" data-toggle="modal" data-target="#creditCardModal">Ingresar
+              información</button>
+          </div>
+
+          <!-- Modal para ingresar datos de la tarjeta de crédito -->
+          <div class="modal fade" id="creditCardModal" tabindex="-1" role="dialog"
+            aria-labelledby="creditCardModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="creditCardModalLabel">Información de la Tarjeta de Crédito</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="creditCardForm">
+                    <div class="form-group">
+                      <label for="cardName">Nombres y apellidos:</label>
+                      <input type="text" class="form-control" id="cardName" name="cardName"
+                        placeholder="Ingrese el nombre en la tarjeta" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="cardNumber">Número de la tarjeta:</label>
+                      <input type="text" class="form-control" id="cardNumber" name="cardNumber"
+                        placeholder="Ingrese el número de tarjeta" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="expirationDate">Fecha de Expiración:</label>
+                      <input type="date" class="form-control" id="expirationDate" name="expirationDate"
+                        placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="cvv">CVV:</label>
+                      <input type="text" class="form-control" id="cvv" name="cvv" placeholder="Ingrese el CVV" required>
+                    </div>
+                    <div class="button-container">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="guardar-btn">Guardar</button>
+        </form>
+      </div>
+
+
+
     </div>
+
+
+    <script>
+
+      $(document).ready(function () {
+        // Ocultar ambas secciones al cargar la página
+        $.ajax({
+          url: 'matriculate-online/php-bd/cargar-carreras.php',
+          method: 'GET',
+          success: function (response) {
+            try {
+              var carreras = JSON.parse(response);
+              var carreraSelect = $('#carrera');
+              carreraSelect.empty(); // Limpiar el select antes de agregar opciones
+              carreraSelect.append('<option value="">Seleccione una carrera</option>'); // Añadir opción por defecto
+
+              carreras.forEach(function (carrera) {
+                carreraSelect.append('<option value="' + carrera.nombre + '">' + carrera.nombre + '</option>');
+              });
+            } catch (e) {
+              console.error('Error al procesar la respuesta:', e);
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error('Error al cargar carreras:', error);
+          }
+        });
+
+        // Ocultar ambas secciones al cargar la página
+        $('#comprobante-section').addClass('hidden');
+        $('#tarjeta-section').addClass('hidden');
+
+        // Manejar el cambio de los botones de radio
+        $('input[name="metodo_pago"]').on('change', function () {
+          if ($(this).val() === 'transferencia') {
+            $('#comprobante-section').removeClass('hidden');
+            $('#tarjeta-section').addClass('hidden');
+          } else if ($(this).val() === 'tarjeta_credito') {
+            $('#comprobante-section').addClass('hidden');
+            $('#tarjeta-section').removeClass('hidden');
+          }
+        });
+      });
+
+    </script>
+
+
 
   </main>
 

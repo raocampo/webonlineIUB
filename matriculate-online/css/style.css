@@ -8,7 +8,8 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
+  margin: 8px !important;
 }
 
 .logo-container img {
@@ -459,9 +460,97 @@ clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento *
 
 /*  TRAMITES 
 */
+/* Estilos personalizados para el modal */
+.modal {
+  display: none; /* Ocultar el modal por defecto */
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: 45%;
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1.25rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.close {
+  padding: .75rem 1.25rem;
+  margin: -0.75rem -1.25rem -0.75rem auto;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: .75rem 1.25rem;
+  border-top: 1px solid #dee2e6;
+  align-items: center;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+
+
+.hidden {
+  display: none;
+}
 
 .form-group{
   padding: 0.5rem;
+}
+
+.button-X {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50; /* Cambia el color de fondo según tu preferencia */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para los botones cuando se pasa el cursor por encima */
+button-X:hover {
+  background-color: #45a049; /* Color de fondo al pasar el cursor */
 }
 
 
