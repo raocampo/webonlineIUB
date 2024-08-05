@@ -282,9 +282,11 @@ img{
 }
 
 .sub-menu a:hover {
-  /*border-bottom: #ffe800 solid 1px;*/
+  border-bottom: #ffe800 solid 2px;
   /*font-size: 1.5rem;*/
+  color: #333;
   font-weight: 800;
+  line-height: 12px;
 }
 
 .navbar ul {
@@ -358,6 +360,8 @@ img{
   /*border-bottom: 1px solid #ffe800;
   background-color: #555;*/
   color: #333;
+  border: none;
+  line-height: normal;
 }
 
 /*SECCION MENU FORMACION CONTINUA*/
