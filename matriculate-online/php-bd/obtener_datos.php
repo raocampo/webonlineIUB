@@ -35,6 +35,8 @@ if (isset($_SESSION['usuario'])) {
     $usuario_pgsa = $stmt_pgsa->fetch();
 
 } else {
-    echo "No has iniciado sesión";
+    // Sin sesión: redirigir al login
+    header('Location: /matriculate-online.php');
+    exit;
 }
 ?>

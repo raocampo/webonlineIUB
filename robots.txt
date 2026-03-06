@@ -1,0 +1,20 @@
+# robots.txt para Instituto Superior Universitario Bolivariano
+
+User-agent: *
+Allow: /
+
+# Bloquear acceso a carpetas administrativas
+Disallow: /matriculate-online/php-bd/
+Disallow: /matriculate-online/administrador/
+Disallow: /matriculate-online/uploads/
+Disallow: /BD/
+Disallow: /proyecto%20old/
+Disallow: /proyecto old/
+
+# Permitir acceso a assets
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Sitemap
+Sitemap: https://bolivarianovirtual.com/sitemap.xml

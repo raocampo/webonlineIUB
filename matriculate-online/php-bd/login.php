@@ -1,63 +1,68 @@
 <?php
 session_start();
-include 'conexion.php';
+require_once 'conexion.php';
+require_once 'security-helper.php';
 
-$usuario = $_POST['usuario'];
-$contrasena = $_POST['contrasena'];
+// Redirigir con mensaje de error (sin usar alert)
+function redirectWithError(string $message): never {
+    $_SESSION['login_error'] = $message;
+    header('Location: /matriculate-online.php');
+    exit;
+}
+
+// Limpiar datos de entrada
+$usuario = SecurityHelper::cleanInput($_POST['usuario'] ?? '');
+$contrasena = $_POST['contrasena'] ?? '';
+
+// Validación básica
+if (empty($usuario) || empty($contrasena)) {
+    redirectWithError('Por favor complete todos los campos.');
+}
 
 try {
-    // Preparar la consulta SQL con parámetros nombrados
+    // Verificar si la cuenta está bloqueada
+    if (SecurityHelper::isAccountLocked($usuario, $pdo)) {
+        redirectWithError('Su cuenta ha sido bloqueada temporalmente por múltiples intentos fallidos. Intente nuevamente en 30 minutos.');
+    }
+
+    // Buscar usuario
     $query = "SELECT * FROM usuarios WHERE usuario = :usuario";
     $stmt = $pdo->prepare($query);
-
-    // Enlazar los parámetros
     $stmt->bindParam(':usuario', $usuario, PDO::PARAM_STR);
-
-    // Ejecutar la consulta
     $stmt->execute();
-
-    // Obtener el resultado
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($row) {
-        // Verificar la contraseña usando password_verify
-        if (password_verify($contrasena, $row['contrasena'])) {
-            // Guardar el usuario en la sesión
-            $_SESSION['usuario'] = $usuario;
+    if ($row && password_verify($contrasena, $row['contrasena'])) {
+        // Login exitoso
+        SecurityHelper::resetLoginAttempts($usuario, $pdo);
 
-            // Obtener el tipo de usuario
-            $tipo = $row['tipo'];
+        $_SESSION['usuario'] = $usuario;
+        $_SESSION['usuario_id'] = $row['id'];
+        $_SESSION['tipo'] = $row['tipo'];
+        $_SESSION['login_time'] = time();
 
-            // Redirigir según el tipo de usuario
-            if ($tipo == "E") {
-                header("Location: ../inicio_matriculate.php");
-                exit;
-            } else if ($tipo == "A") {
-                header("Location: ../administrador/inicio-admin.php");
-                exit;
-            }
+        session_regenerate_id(true);
+
+        SecurityHelper::logActivity($usuario, 'login', 'Inicio de sesión exitoso', $pdo);
+
+        if ($row['tipo'] === 'A') {
+            header('Location: ../administrador/inicio-admin.php');
         } else {
-            // Contraseña incorrecta
-            echo '
-                <script>
-                    alert("Contraseña incorrecta");
-                    window.location = "../../matriculate-online.php";
-                </script>
-            ';
-            exit;
+            header('Location: ../inicio_matriculate.php');
         }
-    } else {
-        // Usuario no encontrado
-        echo '
-            <script>
-                alert("Usuario no existe");
-                window.location = "../matriculate-online.php";
-            </script>
-        ';
         exit;
+    } else {
+        // Credenciales incorrectas
+        if ($row) {
+            SecurityHelper::registerFailedLogin($usuario, $pdo);
+            SecurityHelper::logActivity($usuario, 'login_failed', 'Contraseña incorrecta', $pdo);
+        } else {
+            SecurityHelper::logActivity(null, 'login_failed', "Intento con usuario inexistente: {$usuario}", $pdo);
+        }
+        redirectWithError('Usuario o contraseña incorrectos. Verifique sus datos.');
     }
 } catch (PDOException $e) {
-    // Error de base de datos
-    echo "Error: " . $e->getMessage();
+    error_log('Error en login: ' . $e->getMessage());
+    redirectWithError('Error del sistema. Por favor intente más tarde.');
 }
 ?>

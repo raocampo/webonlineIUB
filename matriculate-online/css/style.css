@@ -8,8 +8,10 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif !important;
-  margin: 8px !important;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 .logo-container img {
@@ -107,9 +109,11 @@ body {
   background-color: #f4f4f4;
 }
 
-.nav-btn:hover {
+.nav-btn:hover,
+.nav-btn.active {
   background-color: #1D327B;
   color: #fff;
+  border-color: #1D327B;
 }
 
 h2{
@@ -129,11 +133,12 @@ text-align: center;
 }
 
 .card {
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e6f0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(29,50,123,0.06);
 }
 
 .card h2 {
@@ -242,9 +247,22 @@ padding-bottom: 0.5rem; /* Añadir padding para separar el contenido de la líne
 }
 
 .btn-guardar {
-display: block; /* Asegura que el botón ocupe todo el ancho disponible */
-margin: 0 auto; /* Establece márgenes automáticos para centrar horizontalmente */
-text-align: center;
+  display: inline-block;
+  margin: 1rem auto 0;
+  text-align: center;
+  background-color: #1D327B;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.btn-guardar:hover {
+  background-color: #152459;
+  transform: translateY(-1px);
 }
 
 .card.datos-personales {
@@ -550,7 +568,313 @@ clear: right; /* Limpiar el flotado a la derecha para evitar el desbordamiento *
 
 /* Estilo para los botones cuando se pasa el cursor por encima */
 button-X:hover {
-  background-color: #45a049; /* Color de fondo al pasar el cursor */
+  background-color: #45a049;
+}
+
+/* === MEJORAS UX === */
+
+/* Foto de perfil pequeña (inicio) */
+.profile-photo-sm {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1D327B;
+}
+
+/* Foto de perfil (perfil) */
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1D327B;
+}
+
+.profile-photo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-photo-upload {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #1D327B;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+}
+
+.profile-photo-upload:hover {
+  background: #152459;
+}
+
+/* Estado vacío */
+.empty-state {
+  text-align: center;
+  padding: 1.5rem;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* Badges de estado */
+.badge-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.badge-status.pagado {
+  background: #d4edda;
+  color: #155724;
+}
+.badge-status.pendiente {
+  background: #fff3cd;
+  color: #856404;
+}
+.badge-status.vencido {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Badge estado asignaturas */
+.badge-estado {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.badge-estado.ec {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* Botones descargas en finanzas */
+.btn-download,
+.btn-certificate {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #1D327B;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.btn-download:hover,
+.btn-certificate:hover {
+  background: #0d1b42;
+  transform: translateY(-1px);
+  color: white;
+}
+.btn-certificate {
+  background: #198754;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.btn-certificate:hover {
+  background: #146c43;
+}
+.certificate-section {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+/* Botones finanzas */
+.detalle-periodo-btn,
+.plan-pagos-btn,
+.continuar-fac,
+.cancelar-fac {
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin: 0.25rem;
+}
+.detalle-periodo-btn,
+.continuar-fac {
+  background: #1D327B;
+  color: #fff;
+}
+.detalle-periodo-btn:hover,
+.continuar-fac:hover {
+  background: #152459;
+}
+.plan-pagos-btn,
+.cancelar-fac {
+  background: #e9ecef;
+  color: #333;
+}
+.plan-pagos-btn:hover,
+.cancelar-fac:hover {
+  background: #ced4da;
+}
+
+/* Accesos rápidos (inicio) */
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.quick-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: #eef1f9;
+  color: #1D327B;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1.5px solid #c8d3ef;
+  transition: background-color 0.2s, color 0.2s;
+}
+.quick-link-btn:hover {
+  background: #1D327B;
+  color: #fff;
+  border-color: #1D327B;
+}
+
+/* Select estilizado */
+select.value {
+  border: 1.5px solid #dee2e6;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #fff;
+}
+select.value:focus {
+  border-color: #1D327B;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29,50,123,0.12);
+}
+
+/* Input en data-row */
+input.value {
+  border: 1.5px solid #dee2e6;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  text-align: right;
+  flex: 1;
+  max-width: 55%;
+  transition: border-color 0.2s;
+}
+input.value:focus {
+  border-color: #1D327B;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(29,50,123,0.1);
+}
+
+/* Tabla saldos mejorada */
+.saldos-table thead th {
+  background-color: #1D327B;
+  color: #fff;
+}
+.saldos-table tbody tr:nth-child(even) {
+  background-color: #f4f6fb;
+}
+.saldos-table tbody tr:hover {
+  background-color: #eef1f9;
+}
+
+/* Header mejorado */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navegación mejorada */
+.navigation {
+  background: #fff;
+  border-bottom: 2px solid #e0e6f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  padding: 0.6rem 1rem;
+  overflow-x: auto;
+}
+.menu {
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+.menu li {
+  margin: 0 0.25rem;
+}
+
+/* Card h2 con icono */
+.card h2 {
+  color: #1D327B;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e0e6f0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Valor finanzas */
+.value-finanzas {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .column {
+    padding: 0.25rem;
+    margin: 0;
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .menu li {
+    margin: 0.25rem;
+  }
+  .nav-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+  .data-rowX {
+    flex-direction: column;
+  }
+  .card.datos-personales .left-column,
+  .card.datos-personales .center-column,
+  .card.datos-personales .right-column,
+  .card.domicilios .left-column,
+  .card.domicilios .right-column {
+    width: 100%;
+    float: none;
+  }
+  .quick-links {
+    flex-direction: column;
+  }
+  input.value {
+    max-width: 100%;
+    text-align: left;
+  }
 }
 
 

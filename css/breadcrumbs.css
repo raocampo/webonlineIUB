@@ -1,0 +1,54 @@
+/**
+ * Estilos para Breadcrumbs de Navegación
+ */
+
+/* Contenedor de breadcrumbs */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--bg-secondary, #f8f9fa);
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs a {
+    color: var(--link-color, #0d6efd);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+    color: var(--link-hover, #0a58ca);
+}
+
+.breadcrumbs span {
+    color: var(--text-secondary, #6c757d);
+}
+
+.breadcrumbs .separator {
+    color: var(--text-tertiary, #adb5bd);
+    user-select: none;
+}
+
+.breadcrumbs .current {
+    color: var(--text-primary, #212529);
+    font-weight: 600;
+}
+
+/* Íconos */
+.breadcrumbs i {
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+}

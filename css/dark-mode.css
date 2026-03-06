@@ -1,0 +1,306 @@
+/**
+ * Estilos para Modo Oscuro
+ * Variables CSS para fácil personalización
+ */
+
+/* Variables de tema claro (por defecto) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-tertiary: #adb5bd;
+    
+    --border-color: #dee2e6;
+    --shadow: rgba(0, 0, 0, 0.1);
+    
+    --link-color: #0d6efd;
+    --link-hover: #0a58ca;
+    
+    --success: #198754;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #0dcaf0;
+    
+    --header-bg: #1D327B;
+    --header-text: #ffffff;
+    
+    --card-bg: #ffffff;
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --input-text: #495057;
+}
+
+/* Variables de tema oscuro */
+.dark-mode {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #3a3a3a;
+    
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --text-tertiary: #6c757d;
+    
+    --border-color: #495057;
+    --shadow: rgba(0, 0, 0, 0.3);
+    
+    --link-color: #4dabf7;
+    --link-hover: #74c0fc;
+    
+    --success: #37b24d;
+    --danger: #f03e3e;
+    --warning: #ffd43b;
+    --info: #22b8cf;
+    
+    --header-bg: #0d1b42;
+    --header-text: #ffffff;
+    
+    --card-bg: #2d2d2d;
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    
+    --input-bg: #3a3a3a;
+    --input-border: #495057;
+    --input-text: #e9ecef;
+}
+
+/* Aplicar variables a elementos */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cards y contenedores */
+.card,
+.tarjeta-evento,
+.metodologia,
+.acceso,
+.horario,
+.mencion,
+.online {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    box-shadow: var(--card-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Inputs y formularios */
+input,
+textarea,
+select {
+    background-color: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    color: var(--input-text) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-tertiary) !important;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* Borders */
+.border,
+[class*="border-"] {
+    border-color: var(--border-color) !important;
+}
+
+/* Secciones */
+.eventos,
+.accesodirecto,
+.registro-online,
+.img-admindex {
+    background-color: var(--bg-secondary);
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+.hero,
+.header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease;
+}
+
+/* Navegación */
+.menu,
+.navigation {
+    background-color: var(--bg-secondary);
+}
+
+.nav-btn {
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.nav-btn:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.nav-btn.active {
+    background-color: var(--header-bg);
+    color: var(--header-text) !important;
+}
+
+/* Botón de toggle de tema */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, var(--header-bg), var(--link-color));
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px var(--shadow);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 16px var(--shadow);
+}
+
+.theme-toggle-btn:active {
+    transform: scale(0.95);
+}
+
+/* Animación de toggle */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.theme-toggle-btn.rotating {
+    animation: rotate 0.5s ease;
+}
+
+/* Tablas */
+table {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+table thead {
+    background-color: var(--bg-tertiary);
+}
+
+table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+table tbody tr:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Toast notifications en modo oscuro */
+.dark-mode .toast {
+    background: var(--card-bg);
+    color: var(--text-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .toast-message {
+    color: var(--text-primary);
+}
+
+/* Modal en modo oscuro */
+.dark-mode .toast-modal-content {
+    background: var(--card-bg);
+    color: var(--text-primary);
+}
+
+/* Skeleton loader en modo oscuro */
+.dark-mode .skeleton-line {
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-secondary) 50%, var(--bg-tertiary) 75%);
+}
+
+/* Imágenes - ajuste de brillo en modo oscuro */
+.dark-mode img {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.dark-mode img:hover {
+    opacity: 1;
+}
+
+/* Botones */
+.dark-mode button:not(.theme-toggle-btn):not(.toast-close) {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    border-color: var(--border-color);
+}
+
+.dark-mode button:hover:not(.theme-toggle-btn) {
+    background-color: var(--link-color);
+}
+
+/* Carrusel */
+.dark-mode .carousel-control-prev-icon,
+.dark-mode .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-toggle-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 18px;
+    }
+}
+
+/* Preferencia del sistema (opcional) */
+@media (prefers-color-scheme: dark) {
+    :root:not(.light-mode-forced) {
+        /* Aplicar variables oscuras por defecto si el sistema está en modo oscuro */
+    }
+}
+
+/* Transiciones suaves para todos los elementos afectados */
+* {
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+/* Excepciones de transición */
+.carousel-item,
+.fade,
+.modal,
+.toast {
+    transition: all 0.3s ease !important;
+}

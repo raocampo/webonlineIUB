@@ -5,3 +5,25 @@
 /pruebamenu.html
 /menu.html
 /styles.css
+
+# Dependencias
+/vendor/
+/node_modules/
+
+# Entorno local
+/.env
+
+# Archivos temporales y runtime
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/cache/*
+!/storage/cache/.gitkeep
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+
+# Uploads privados
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+
+# Legado fuera del repo
+/proyecto old/

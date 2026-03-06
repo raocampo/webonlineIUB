@@ -4,69 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Eric Alvarado">
-  <title>Matriculate Online - Instituto Bolivariano</title>
+  <title>Inicio - Matricúlate Online | Instituto Bolivariano</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Asegúrate de incluir Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
 </head>
 
 <body>
 
+<?php
+require_once 'php-bd/security-helper.php';
+require_once 'php-bd/obtener_datos.php';
+?>
+
   <header class="header">
-    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="logo-container">
-      <img src="../assets/images/logos/BolOnline.png" alt="Logo Instituto Bolivariano">
+      <a href="../">
+        <img src="../assets/images/logos/BolOnline.png" alt="Logo Instituto Bolivariano" width="150">
+      </a>
     </div>
     <div class="user-info">
       <div class="user-details">
-        <span class="user-welcome">Bienvenido <?php echo htmlspecialchars($usuario['usuario']); ?></span>
+        <span class="user-welcome"><i class="fas fa-user-circle"></i> <?php echo esc($usuario['nombres'] ?? $usuario['usuario']); ?></span>
         <form action="php-bd/logout.php" method="post" style="display:inline;">
-          <button class="logout-btn" type="submit">Cerrar Sesión</button>
+          <?php echo SecurityHelper::csrfField(); ?>
+          <button class="logout-btn" type="submit"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
         </form>
       </div>
     </div>
   </header>
 
-  <nav class="navigation">
-    <ul class="menu">
-      <li><a href="inicio_matriculate.php" class="nav-btn">Inicio</a></li>
-      <li><a href="perfil-matriculate.php" class="nav-btn">Perfil</a></li>
-      <li class=><a href="misfinanzas-matricualate.php" class="nav-btn">Mis Finanzas</a></li>
-      <li class="nav-dropdown">
-        <a href="aula-virtual_matriculate.php" class="nav-btn">Aula Virtual <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="https://bolivarianovirtual.com/login/index.php">Acceder</a></li>
-        </ul>
-      </li>
-      <li><a href="tramites_matriculate.php" class="nav-btn">Trámites en Línea IUBS</a></li>
-      <li><a href="institucionales.php" class="nav-btn">Reglamentos/Misión/Visión</a></li>
-    </ul>
-  </nav>
+  <?php include 'components/nav.php'; ?>
 
   <main class="content">
-    <?php include 'php-bd/obtener_datos.php'; ?>
     <div class="column">
       <div class="card">
-        <h2>Datos Personales</h2>
+        <h2><i class="fas fa-user"></i> Datos Personales</h2>
         <div class="image-containerH">
-          <img src="../assets/images/matriculaOnline/avatarUser.png" alt="Foto de Perfil">
-          <span class="label update-photo">Actualizar Foto</span>
-
+          <?php
+          $fotoUrl = !empty($usuario['foto_perfil']) ? '../' . $usuario['foto_perfil'] : '../assets/images/matriculaOnline/avatarUser.png';
+          ?>
+          <img src="<?php echo esc($fotoUrl); ?>" alt="Foto de Perfil" class="profile-photo-sm">
+          <a href="perfil-matriculate.php" class="label update-photo"><i class="fas fa-camera"></i> Actualizar Foto</a>
         </div>
         <div class="data-row">
           <span class="label">Nombres:</span>
-          <span class="value"><?php echo $usuario['nombres']; ?></span>
+          <span class="value"><?php echo esc($usuario['nombres']); ?></span>
         </div>
         <div class="data-row">
           <span class="label">Número de matrícula:</span>
-          <span class="value"><?php echo $usuario['nro_matricula']; ?></span>
+          <span class="value"><?php echo esc($usuario['nro_matricula']); ?></span>
         </div>
         <div class="data-row">
           <span class="label">Campus:</span>
@@ -74,73 +62,94 @@
         </div>
         <div class="data-row">
           <span class="label">Identificación:</span>
-          <span class="value"><?php echo $usuario['identificacion']; ?></span>
+          <span class="value"><?php echo esc($usuario['identificacion']); ?></span>
         </div>
         <div class="data-row">
           <span class="label">Número de teléfono:</span>
-          <span class="value"><?php echo $usuario['nmr_tel']; ?></span>
+          <span class="value"><?php echo esc($usuario['nmr_tel']); ?></span>
         </div>
       </div>
+
       <div class="card next-payment">
-        <h2 class="section-title">Último pago</h2>
+        <h2 class="section-title"><i class="fas fa-money-bill-wave"></i> Último Pago</h2>
+        <?php
+        try {
+          $stmtPago = $pdo->prepare("SELECT * FROM pagos WHERE usuario_id = ? ORDER BY fecha_pago DESC LIMIT 1");
+          $stmtPago->execute([$_SESSION['usuario_id']]);
+          $ultimoPago = $stmtPago->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+          $ultimoPago = null;
+        }
+        ?>
+        <?php if ($ultimoPago): ?>
         <table class="payment-table">
           <thead>
             <tr>
-              <th>Modalidad</th>
+              <th>Concepto</th>
               <th>Monto</th>
-              <th>Fecha Límite</th>
+              <th>Fecha</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Presencial</td>
-              <td>$5000</td>
-              <td>30/03/2024</td>
+              <td><?php echo esc($ultimoPago['concepto'] ?? 'Pago de Matrícula'); ?></td>
+              <td>$<?php echo number_format($ultimoPago['monto'], 2); ?></td>
+              <td><?php echo date('d/m/Y', strtotime($ultimoPago['fecha_pago'])); ?></td>
             </tr>
           </tbody>
         </table>
+        <?php else: ?>
+        <p class="empty-state"><i class="fas fa-info-circle"></i> No hay pagos registrados aún.</p>
+        <?php endif; ?>
       </div>
+
       <div class="card saldos">
-        <h2 class="section-title">Saldos</h2>
+        <h2 class="section-title"><i class="fas fa-balance-scale"></i> Saldos</h2>
+        <?php
+        try {
+          $stmtSaldo = $pdo->prepare("SELECT * FROM pagos_pendientes WHERE usuario_id = ? LIMIT 1");
+          $stmtSaldo->execute([$_SESSION['usuario_id']]);
+          $saldo = $stmtSaldo->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+          $saldo = null;
+        }
+        ?>
         <table class="saldos-table">
           <thead>
             <tr>
-              <th></th>
-              <th>Saldos</th>
-              <th>Saldo Total</th>
+              <th>Concepto</th>
+              <th>Saldo</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Colegiatura</td>
-              <td>USD $0</td>
-              <td>USD $0</td>
+              <td><?php echo $saldo ? 'USD $' . number_format($saldo['colegiatura'], 2) : 'USD $0.00'; ?></td>
             </tr>
             <tr>
               <td>Intereses</td>
-              <td>USD $0</td>
-              <td>USD $0</td>
+              <td><?php echo $saldo ? 'USD $' . number_format($saldo['intereses'], 2) : 'USD $0.00'; ?></td>
             </tr>
             <tr>
               <td>Accesorios</td>
-              <td>USD $0</td>
-              <td>USD $0</td>
+              <td><?php echo $saldo ? 'USD $' . number_format($saldo['otros'], 2) : 'USD $0.00'; ?></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
+
     <div class="column">
       <div class="card">
         <?php
-        // Incluir y obtener el array de materias del semestre 1 desde obtener-carrera.php
         $data = include 'php-bd/obtener-carrera.php';
         $nombreCarrera = $data['nombreCarrera'];
         $desCarrera = $data['desCarrera'];
+        $semestre = $data['semestre'] ?? 'Actual';
         include 'php-bd/obtener-asignaturas.php';
         ?>
 
-        <h2>Programas Inscritos</h2>
+        <h2><i class="fas fa-graduation-cap"></i> Programas Inscritos</h2>
         <div class="data-rowX">
           <h3 class="value"><?php echo htmlspecialchars($nombreCarrera); ?></h3>
         </div>
@@ -151,35 +160,50 @@
           <table class="saldos-table">
             <thead>
               <tr>
-                <th colspan="3">SEMESTRE 2</th>
+                <th colspan="3">SEMESTRE <?php echo htmlspecialchars((string)$semestre); ?></th>
               </tr>
               <tr>
                 <th>Asignatura</th>
                 <th>Clave</th>
-                <th>Progreso</th>
+                <th>Estado</th>
               </tr>
             </thead>
             <tbody>
               <?php
               if (!empty($asignaturas)) {
                 foreach ($asignaturas as $asignatura) {
-                  echo "<tr>
-                            <td>{$asignatura['nmb_mtr']}</td>
-                            <td>{$asignatura['clave']}</td>
-                            <td style='background:green'>E C</td>
-                          </tr>";
+                  echo '<tr>
+                    <td>' . htmlspecialchars($asignatura['nmb_mtr']) . '</td>
+                    <td>' . htmlspecialchars($asignatura['clave']) . '</td>
+                    <td><span class="badge-estado ec">En Curso</span></td>
+                  </tr>';
                 }
               } else {
-                echo "<tr>
-                        <td colspan='3'>No hay asignaturas registradas</td>
-                      </tr>";
+                echo '<tr><td colspan="3" class="empty-state">No hay asignaturas registradas</td></tr>';
               }
               ?>
             </tbody>
           </table>
         </div>
       </div>
-    </div>
+
+      <div class="card">
+        <h2><i class="fas fa-link"></i> Accesos Rápidos</h2>
+        <div class="quick-links">
+          <a href="https://bolivarianovirtual.com/login/index.php" target="_blank" rel="noopener" class="quick-link-btn">
+            <i class="fas fa-chalkboard-teacher"></i> Aula Virtual
+          </a>
+          <a href="misfinanzas-matricualate.php" class="quick-link-btn">
+            <i class="fas fa-file-invoice-dollar"></i> Mis Finanzas
+          </a>
+          <a href="documentos_matriculate.php" class="quick-link-btn">
+            <i class="fas fa-folder-open"></i> Mis Documentos
+          </a>
+          <a href="tramites_matriculate.php" class="quick-link-btn">
+            <i class="fas fa-clipboard-list"></i> Trámites
+          </a>
+        </div>
+      </div>
     </div>
   </main>
 
